@@ -14,15 +14,14 @@
     "grunt": "~0.4.1",
     "grunt-contrib-connect": "~0.5.0",
     "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-contrib-less": "^1.0.0",
     "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "1.1.0",
+    "grunt-swig-templates": "^0.1.4",
     "grunt-version": "^0.3.0",
     "jit-grunt": "0.9.1",
-    "node-bourbon": "4.2.3",
-    "grunt-sass": "1.1.0"
+    "node-bourbon": "4.2.3"
   },
   "dependencies": {
-    "load-grunt-tasks": "~0.2.0",
-    "swig": "^1.4.2"
+    "load-grunt-tasks": "~0.2.0"
   }
 }

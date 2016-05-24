@@ -7,7 +7,9 @@ module.exports = function (grunt) {
         require('load-grunt-tasks')(grunt);
     } else {
         // Use jit-grunt to only load necessary tasks for each invocation of grunt.
-        require('jit-grunt')(grunt);
+        require('jit-grunt')(grunt,{
+                'swig': 'grunt-swig-templates'
+            });
     }
 
     grunt.config.merge({
@@ -20,6 +22,14 @@ module.exports = function (grunt) {
                     'sass'
                 ]
             },
+            swig: {
+                files: [
+                    'templates/**/*.html'
+                ],
+                tasks: [
+                    'swig'
+                ]
+            }
         },
         sass: {
             options: {
@@ -36,6 +46,17 @@ module.exports = function (grunt) {
                 }
             }
         },
+
+        swig: {
+            options: {
+            },
+            dev: {
+                expand: true,
+                src: [ 'templates/**/*.html' ],
+                dest: 'compiled-templates/'
+            },
+          }
+
     });
 
     // - - - T A S K S - - -
@@ -44,10 +65,12 @@ module.exports = function (grunt) {
 
     grunt.registerTask('dev', [
         'sass',
+        'swig',
         'watch'
     ]);
 
     grunt.registerTask('build', [
+        'swig',
         'sass'
     ]);
 
