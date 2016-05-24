@@ -1,0 +1,28 @@
+{
+  "name": "style-guide",
+  "version": "0.0.0",
+  "author": "Incuna",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/incuna/style-guide"
+  },
+  "bugs": {
+    "url": "https://github.com/incuna/style-guide/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-version": "^0.3.0",
+    "jit-grunt": "0.9.1",
+    "node-bourbon": "4.2.3",
+    "grunt-sass": "1.1.0"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "~0.2.0",
+    "swig": "^1.4.2"
+  }
+}
