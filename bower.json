@@ -1,0 +1,20 @@
+{
+  "name": "style-guide",
+  "version": "0.0.0",
+  "homepage": "https://github.com/incuna/style-guide",
+  "authors": [
+    "Beth Menzies <beth@incuna.com>"
+  ],
+  "description": "Incuna's living style guide",
+  "license": "MIT",
+  "dependencies": {
+    "bourbon": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
