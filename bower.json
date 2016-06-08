@@ -8,7 +8,11 @@
   "description": "Incuna's living style guide",
   "license": "MIT",
   "dependencies": {
-    "bourbon": "*"
+    "bourbon": "*",
+    "incuna-sass": "5.2.3"
+  },
+  "devDependencies": {
+    "incuna-transitions": "incuna/incuna-transitions#1.4.2"
   },
   "ignore": [
     "**/.*",

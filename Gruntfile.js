@@ -37,6 +37,8 @@ module.exports = function (grunt) {
                 sourceMapContents: true,
                 includePaths: [
                     require('node-bourbon').includePaths,
+                    'bower_components/incuna-sass',
+                    'bower_components/incuna-transitions',
                     'sass'
                 ]
             },

@@ -1,0 +1,48 @@
+body
+    font:
+        family: 'Lato', sans-serif
+    *
+        box-sizing: border-box
+
+.structure
+    max-width: $site-width
+    margin: 0 auto
+    position: relative
+    padding: 0 $site-small-padding
+
+.page-header,
+.page-footer
+    .structure
+        padding: 60px $site-small-padding
+
+.page-header
+    @include background(linear-gradient(top, #373737, #212121))
+
+.title,
+.tagline
+    color: #fff
+    text-shadow: #111 0px 0px 10px
+
+.title
+    font:
+        size: 42px
+        weight: 700
+
+.tagline
+    font:
+        size: 24px
+        weight: 300
+
+.main-content-wrap
+    background: #eee
+    border-top: 1px solid #111
+    border-bottom: 1px solid #111
+
+.main-content
+    padding-top: 40px
+
+.page-footer
+    background: #212121
+    color: #fff
+    margin:
+        top: 100px
