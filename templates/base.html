@@ -68,56 +68,56 @@
 
                 {% block colors %}
                     <div class="colors-section" id="colors-example">
-                        <h3>Colors</h3>
+                        <h2>Colors</h2>
                         {% include 'components/colors.html' %}
                     </div>
                 {% endblock colors %}
 
                 {% block buttons %}
                     <div class="buttons-section" id="buttons-example">
-                        <h3>Buttons</h3>
+                        <h2>Buttons</h2>
                         {% include 'components/buttons.html' %}
                     </div>
                 {% endblock buttons %}
 
                 {% block icons %}
                     <div class="icons-section" id="icons-example">
-                        <h3>Icons</h3>
+                        <h2>Icons</h2>
                         {% include 'components/icons.html' %}
                     </div>
                 {% endblock icons %}
 
                 {% block typography %}
                     <div class="typography-section" id="typography-example">
-                        <h3>Typography</h3>
+                        <h2>Typography</h2>
                         {% include 'components/typography.html' %}
                     </div>
                 {% endblock typography %}
 
                 {% block lists %}
                     <div class="lists-section" id="lists-example">
-                        <h3>Lists</h3>
+                        <h2>Lists</h2>
                         {% include 'components/lists.html' %}
                     </div>
                 {% endblock lists %}
 
                 {% block tables %}
                     <div class="tables-section" id="tables-example">
-                        <h3>Tables</h3>
+                        <h2>Tables</h2>
                         {% include 'components/tables.html' %}
                     </div>
                 {% endblock tables %}
 
                 {% block forms %}
                     <div class="forms-section" id="forms-example">
-                        <h3>Forms</h3>
+                        <h2>Forms</h2>
                         {% include 'components/forms.html' %}
                     </div>
                 {% endblock forms %}
 
                 {% block notifications %}
                     <div class="notifications-section" id="notifications-example">
-                        <h3>Notifications</h3>
+                        <h2>Notifications</h2>
                         {% include 'components/notifications.html' %}
                     </div>
                 {% endblock notifications %}
@@ -130,6 +130,8 @@
                 </section>
             {% endblock uxblock %}
 
+            {{ people }}
+
         </main>
 
         <footer class="{% block footer-class %}page-footer{% endblock footer-class %}">
@@ -141,6 +143,5 @@
         </footer>
 
     </body>
-
 
 </html>
