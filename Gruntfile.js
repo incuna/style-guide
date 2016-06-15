@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         require('load-grunt-tasks')(grunt);
     } else {
         // Use jit-grunt to only load necessary tasks for each invocation of grunt.
-        require('jit-grunt')(grunt,{
+        require('jit-grunt')(grunt, {
                 'swig': 'grunt-swig-templates'
             });
     }
@@ -44,20 +44,34 @@ module.exports = function (grunt) {
             },
             dev: {
                 files: {
-                   'styles/main.css': 'sass/main.sass'
+                    'styles/main.css': 'sass/main.sass'
                 }
             }
         },
 
         swig: {
             options: {
+                data: {
+                    colors: {
+                        // Just some example colors for show
+                        color1: '#206ba4',
+                        color2: '#bbd9ee',
+                        color3: '#ebf4fa',
+                        color4: '#f8ddb3',
+                        color5: '#e7e4d3',
+                        color6: '#f1efe2',
+                        color7: '#9c9f83',
+                        color8: '#ab7e5b',
+                        color9: '#5b755d'
+                    }
+                }
             },
             dev: {
                 expand: true,
                 src: [ 'templates/**/*.html' ],
                 dest: 'compiled-templates/'
-            },
-          }
+            }
+        }
 
     });
 
