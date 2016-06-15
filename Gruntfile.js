@@ -57,12 +57,12 @@ module.exports = function (grunt) {
                         color1: '#206ba4',
                         color2: '#bbd9ee',
                         color3: '#ebf4fa',
+                        color4: '#f8ddb3',
                         color5: '#e7e4d3',
                         color6: '#f1efe2',
                         color7: '#9c9f83',
                         color8: '#ab7e5b',
-                        color9: '#f8ddb3',
-                        color10: '#5b755d'
+                        color9: '#5b755d'
                     }
                 }
             },
