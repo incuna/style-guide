@@ -21,9 +21,11 @@
     "grunt-version": "0.3.3",
     "jit-grunt": "0.9.1",
     "load-grunt-tasks": "0.2.0",
-    "node-bourbon": "4.2.3"
+    "node-bourbon": "4.2.3",
+    "npm install --save-dev bower"
   },
   "scripts": {
-    "test": "grunt build"
+    "test": "grunt build",
+    "postinstall": "bower install"
   }
 }
