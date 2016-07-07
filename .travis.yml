@@ -2,13 +2,6 @@ sudo: false
 
 language: node_js
 node_js:
-    - '5.0'
-
+    - '6'
 notifications:
     email: false
-
-install:
-    - npm install
-
-script:
-    - grunt test
