@@ -3,3 +3,5 @@ node_js:
     - '6'
 notifications:
     email: false
+install: 
+    bower install
