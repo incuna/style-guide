@@ -24,6 +24,6 @@
     "node-bourbon": "4.2.3"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt build"
   }
 }
