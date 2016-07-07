@@ -25,7 +25,6 @@
     "node-bourbon": "4.2.3"
   },
   "scripts": {
-    "test": "grunt build",
-    "postinstall": "bower install"
+    "test": "grunt build"
   }
 }
