@@ -1106,6 +1106,23 @@ td, th {
   .color9 .color-block {
     background: #5b755d; }
 
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 8px;
+  background: #d8d8d8; }
+  .icon .icon-name,
+  .icon .inline-svg {
+    display: inline-block;
+    vertical-align: middle; }
+  .icon .inline-svg {
+    width: 15px;
+    height: 15px;
+    fill: #666666;
+    margin-left: 10px; }
+
 button {
   border: 0;
   background: none;
@@ -1157,8 +1174,24 @@ body {
   color: #fff;
   margin-top: 100px; }
 
-h2:not(.tagline) {
-  border-bottom: 1px solid #d8d8d8;
+.main-section-title,
+.section-title,
+.section-sub-title {
   padding-bottom: 10px; }
+
+.main-section-title {
+  border-bottom: 3px solid #cccccc;
+  margin-bottom: 40px;
+  text-align: center; }
+
+.section-title {
+  border-bottom: 2px solid #d8d8d8; }
+
+.section-sub-title {
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 30px; }
+
+.section {
+  margin-bottom: 40px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -8,8 +8,8 @@ module.exports = function (grunt) {
     } else {
         // Use jit-grunt to only load necessary tasks for each invocation of grunt.
         require('jit-grunt')(grunt, {
-                'swig': 'grunt-swig-templates'
-            });
+            'swig': 'grunt-swig-templates'
+        });
     }
 
     grunt.config.merge({
@@ -64,12 +64,17 @@ module.exports = function (grunt) {
                         color8: '#ab7e5b',
                         color9: '#5b755d'
                     },
+                    icons: {
+                        alert: 'alert',
+                        flag: 'flag',
+                        blah: 'blah'
+                    }
                 }
             },
             dev: {
                 expand: true,
                 cwd: 'templates',
-                src: [ 'index.html' ],
+                src: ['index.html'],
                 dest: './'
             }
         }
