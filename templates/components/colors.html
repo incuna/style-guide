@@ -1,13 +1,13 @@
 {% block colors-content %}
 
-    <h3>Color usage</h3>
+    <h3 class="section-sub-title">Color usage</h3>
 
     {% block colors-intro %}
         <p>When using a colour in a sass file, please try to use a descriptive variable name not the colour name itself. This will allow for easy reskinning in future.</p>
     {% endblock colors-intro %}
 
     {% block main-colors %}
-        <h3>Main colors</h3>
+        <h3 class="section-sub-title">Main colors</h3>
 
         {% for color in colors %}
             <div class="color {{ loop.key }}">
@@ -19,7 +19,7 @@
     {% endblock main-colors %}
 
     {% block greys %}
-        <h3>Greys</h3>
+        <h3 class="section-sub-title">Greys</h3>
 
         <div class="color grey-1">
             <p class="color-name">grey-1</p>
