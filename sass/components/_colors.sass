@@ -1,67 +1,87 @@
+.style-guide-page
+    .color
+        display: inline-block
+        margin: 10px
+        text-align: center
+        max-width: 80px
 
-.color
-    display: inline-block
-    margin: 10px
-    text-align: center
-    max-width: 80px
+        .color-name
+            font:
+                size: 16px
+                weight: bold
+            text-transform: capitalize
 
-    .color-name
-        font:
-            size: 16px
-            weight: bold
-        text-transform: capitalize
+        .hexcode
+            font:
+                size: 13px
 
-    .hexcode
-        font:
-            size: 13px
+    .color-block
+        display: block
+        width: 80px
+        height: 80px
+        border-radius: 100%
 
-.color-block
-    display: block
-    width: 80px
-    height: 80px
-    border-radius: 100%
-
-    .grey-1 &
-        background: $grey-1
-    .grey-2 &
-        background: $grey-2
-    .grey-3 &
-        background: $grey-3
-    .grey-4 &
-        background: $grey-4
-    .grey-5 &
-        background: $grey-5
-    .grey-6 &
-        background: $grey-6
-    .grey-7 &
-        background: $grey-7
-    .grey-8 &
-        background: $grey-8
-    .grey-9 &
-        background: $grey-9
-    .grey-10 &
-        background: $grey-10
-    .grey-11 &
-        background: $grey-11
+    .grey-1
+        .color-block
+            background: $grey-1
+    .grey-2
+        .color-block
+            background: $grey-2
+    .grey-3
+        .color-block
+            background: $grey-3
+    .grey-4
+        .color-block
+            background: $grey-4
+    .grey-5
+        .color-block
+            background: $grey-5
+    .grey-6
+        .color-block
+            background: $grey-6
+    .grey-7
+        .color-block
+            background: $grey-7
+    .grey-8
+        .color-block
+            background: $grey-8
+    .grey-9
+        .color-block
+            background: $grey-9
+    .grey-10
+        .color-block
+            background: $grey-10
+    .grey-11
+        .color-block
+            background: $grey-11
 
     // Example colors
     // Using these color names as they are unlikely to be used in any of
     // our projects and hopefully won't cause conflicts
-    .color1 &
-        background: #206ba4
-    .color2 &
-        background: #bbd9ee
-    .color3 &
-        background: #ebf4fa
-    .color4 &
-        background: #f8ddb3
-    .color5 &
-        background: #e7e4d3
-    .color6 &
-        background: #f1efe2
-    .color7 &
-        background: #9c9f83
-    .color8 &
-        background: #ab7e5b
-    .color9 &
-        background: #5b755d
+    .color1
+        .color-block
+            background: #206ba4
+    .color2
+        .color-block
+            background: #bbd9ee
+    .color3
+        .color-block
+            background: #ebf4fa
+    .color4
+        .color-block
+            background: #f8ddb3
+    .color5
+        .color-block
+            background: #e7e4d3
+    .color6
+        .color-block
+            background: #f1efe2
+    .color7
+        .color-block
+            background: #9c9f83
+    .color8
+        .color-block
+            background: #ab7e5b
+    .color9
+        .color-block
+            background: #5b755d
