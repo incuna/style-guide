@@ -10,28 +10,28 @@
         <title>Style Guide</title>
     </head>
 
-    <body class="style-guide-base">
+    <body class="style-guide-page">
 
-        <header class="page-header">
+        <header class="sg-header">
             <div class="structure">
-                <h1 class="title">Style Guide</h1>
-                <h2 class="tagline">Living style guide from Incuna Ltd.</h2>
+                <h1 class="sg-title">Style Guide</h1>
+                <h2 class="sg-tagline">Living style guide from Incuna Ltd.</h2>
             </div>
         </header>
 
-        <main class="main-content structure">
+        <main class="sg-main-content structure">
 
-            <section class="intro">
+            <section class="sg-intro">
                 
-                    <p class="intro-text">
+                    <p class="sg-intro-text">
                         <span>When styling a new section or element on </span>
-                        <span class="project-name">this project, </span>
+                        <span class="sg-project-name">this project, </span>
                         <span>please refer to the guide below. Stick to the colour palette when possible - if a colour doesn't exist here, check with the designer whether an existing colour can be used, or a new one needs to be added. Try to avoid unecessary repetition</span>
                     </p>
                 
                 
                     <h3>Jump to a section:</h3>
-                    <h4>Components</h4>
+                    <h4><a href="#components-section">Components</h4>
                     <ul>
                         
                             <li><a href="#colors-example">Colors</a></li>
@@ -55,30 +55,55 @@
                             <li><a href="#forms-example">Form elements</a></li>
                         
                         
-                            <li><a href="#notifications-example">Notification styles</a></li>
+                            <li><a href="#messages-example">messages</a></li>
                         
                     </ul>
+                    
+                        <h4><a href="#page-section">Page elements</h4>
+                        <ul>
+                            
+                                <li><a href="#page-titles-example">page-titles</a></li>
+                            
+                            
+                                <li><a href="#widgets-example">widgets</a></li>
+                            
+                            
+                                <li><a href="#navigation-example">navigation</a></li>
+                            
+                        </ul>
+                        <h4><a href="#ux-section">UX elements</h4>
+                        <ul>
+                            
+                                <li><a href="#transitions-example">transitions</a></li>
+                            
+                            
+                                <li><a href="#expanding-collapsing-example">expanding-collapsing</a></li>
+                            
+                            
+                                <li><a href="#ui-elements-example">ui-elements</a></li>
+                            
+                        </ul>
                     
 
                 
             </section>
 
-            <section class="components">
-                <h2 class="main-section-title">Components</h2>
+            <section class="sg-components" id="components-section">
+                <h2 class="sg-main-section-title">Components</h2>
 
                 
-                    <div class="section colors-section" id="colors-example">
-                        <h2 class="section-title">Colors</h2>
+                    <div class="sg-section colors-section" id="colors-example">
+                        <h2 class="sg-section-title">Colors</h2>
                         
 
-    <h3 class="section-sub-title">Color usage</h3>
+    <h3 class="sg-section-sub-title">Color usage</h3>
 
     
         <p>When using a colour in a sass file, please try to use a descriptive variable name not the colour name itself. This will allow for easy reskinning in future.</p>
     
 
     
-        <h3 class="section-sub-title">Main colors</h3>
+        <h3 class="sg-section-sub-title">Main colors</h3>
 
         
             <div class="color color1">
@@ -138,7 +163,7 @@
     
 
     
-        <h3 class="section-sub-title">Greys</h3>
+        <h3 class="sg-section-sub-title">Greys</h3>
 
         <div class="color grey-1">
             <p class="color-name">grey-1</p>
@@ -213,18 +238,18 @@
                 
 
                 
-                    <div class="section buttons-section" id="buttons-example">
-                        <h2 class="section-title">Buttons</h2>
+                    <div class="sg-section buttons-section" id="buttons-example">
+                        <h2 class="sg-section-title">Buttons</h2>
                         
 
-    <h3 class="section-sub-title">Button usage</h3>
+    <h3 class="sg-section-sub-title">Button usage</h3>
 
     
         <p>A paragraph of text you can use to explain how your button styles work</p>
     
 
     
-        <h3 class="section-sub-title">Button Exmaples</h3>
+        <h3 class="sg-section-sub-title">Button Exmaples</h3>
 
         
             <button>Basic button</button>
@@ -255,18 +280,18 @@
                 
 
                 
-                    <div class="section icons-section" id="icons-example">
-                        <h2 class="section-title">Icons</h2>
+                    <div class="sg-section icons-section" id="icons-example">
+                        <h2 class="sg-section-title">Icons</h2>
                         
 
-    <h3 class="section-sub-title">Icon usage</h3>
+    <h3 class="sg-section-sub-title">Icon usage</h3>
 
     
         <p>When using a colour in a sass file, please try to use a descriptive variable name not the colour name itself. This will allow for easy reskinning in future.</p>
     
 
     
-        <h3 class="section-sub-title">Available icons</h3>
+        <h3 class="sg-section-sub-title">Available icons</h3>
 
         
             <div class="icon alert">
@@ -298,12 +323,12 @@
                 
 
                 
-                    <div class="section typography-section" id="typography-example">
-                        <h2 class="section-title">Typography</h2>
+                    <div class="sg-section typography-section" id="typography-example">
+                        <h2 class="sg-section-title">Typography</h2>
                         
 
     
-        <h3 class="section-sub-title">Fonts</h3>
+        <h3 class="sg-section-sub-title">Fonts</h3>
         <p>The following fonts are available for use on this project</p>
         
             <p>
@@ -344,7 +369,7 @@
     
 
     
-        <h3 class="section-sub-title">Font usage</h3>
+        <h3 class="sg-section-sub-title">Font usage</h3>
 
         <h1>Heading 1 Example</h1>
         <h2>Heading 2 Example</h2>
@@ -364,7 +389,7 @@
     
 
     
-        <h3 class="section-sub-title">Links</h3>
+        <h3 class="sg-section-sub-title">Links</h3>
 
         
             <p>Make meme, make cute face spread kitty litter all over house but all of a sudden cat goes crazy scratch leg <a href="">This is an inline text link</a> knock dish off table head butt</p>
@@ -389,12 +414,12 @@
                 
 
                 
-                    <div class="section lists-section" id="lists-example">
-                        <h2 class="section-title">Lists</h2>
+                    <div class="sg-section lists-section" id="lists-example">
+                        <h2 class="sg-section-title">Lists</h2>
                         
 
     
-        <h3 class="section-sub-title">Unordered Lists</h3>
+        <h3 class="sg-section-sub-title">Unordered Lists</h3>
 
         <ul>
             <li>List item example</li>
@@ -412,7 +437,7 @@
     
 
     
-        <h3 class="section-sub-title">Ordered Lists</h3>
+        <h3 class="sg-section-sub-title">Ordered Lists</h3>
 
         <ol>
             <li>List item example</li>
@@ -436,12 +461,12 @@
                 
 
                 
-                    <div class="section tables-section" id="tables-example">
-                        <h2 class="section-title">Tables</h2>
+                    <div class="sg-section tables-section" id="tables-example">
+                        <h2 class="sg-section-title">Tables</h2>
                         
 
     
-        <h3 class="section-sub-title">Table Elements</h3>
+        <h3 class="sg-section-sub-title">Table Elements</h3>
 
         <table>
             
@@ -498,7 +523,7 @@
     
 
     
-        <h3 class="section-sub-title">Table Classes</h3>
+        <h3 class="sg-section-sub-title">Table Classes</h3>
 
         <div class="table">
             
@@ -544,35 +569,295 @@
                 
 
                 
-                    <div class="section forms-section" id="forms-example">
-                        <h2 class="section-title">Forms</h2>
+                    <div class="sg-section forms-section" id="forms-example">
+                        <h2 class="sg-section-title">Forms</h2>
                         
                     </div>
                 
 
                 
-                    <div class="section notifications-section" id="notifications-example">
-                        <h2 class="section-title">Notifications</h2>
+                    <div class="sg-section messages-section" id="messages-example">
+                        <h2 class="sg-section-title">Messages</h2>
                         
+    <ul class="messages">
+        <li class="message success">Success message</li>
+        <li class="message error">Error message</li>
+        <li class="message info">Info message</li>
+        <li class="message warn">Warn message</li>
+    </ul>
+
+
                     </div>
                 
             </section>
 
             
-                <section class="ux-elements">
-                    <h2 class="section-title">UX Elements</h2>
+                <section class="sg-page-elements" id="page-section">
+                    <h2 class="sg-main-section-title">Page Elements</h2>
+                    
+
+                        
+                            <div class="sg-section page-titles-section" id="page-titles-example">
+                                <h2 class="sg-section-title">Page-titles</h2>
+                                
+
+    <h1 class="page-title">This is an example page title</h1>
+
+
+
+                            </div>
+                        
+
+                        
+                            <div class="sg-section widgets-section" id="widgets-example">
+                                <h2 class="sg-section-title">Widgets</h2>
+                                
+
+    
+        <article class="widget standard-widget ">
+            <header class="widget-header">
+                <div class="widget-header-inner">
+                    
+                        <h1 class="widget-title">
+                            <span class="widget-title-inner">Basic widget example</span>
+                        </h1>
+                    
+                </div>
+            </header>
+
+            <section class="widget-body">
+                <div class="widget-body-inner">
+                    
+                        Widget body content
+                    
+                </div>
+            </section>
+
+            <footer class="widget-footer">
+                <div class="widget-footer-inner">
+                    
+                        Widget footer content
+                    
+                </div>
+            </footer>
+        </article>
+    
+
+    
+        <article class="widget standard-widget ">
+            <header class="widget-header">
+                <div class="widget-header-inner">
+                    
+                        <h1 class="widget-title">
+                            <span class="widget-title-inner">Featured widget example</span>
+                        </h1>
+                    
+                </div>
+            </header>
+
+            <section class="widget-body">
+                <div class="widget-body-inner">
+                    
+                        Widget body content
+                    
+                </div>
+            </section>
+
+            <footer class="widget-footer">
+                <div class="widget-footer-inner">
+                    
+                        Widget footer content
+                    
+                </div>
+            </footer>
+        </article>
+    
+
+    
+
+
+
+                            </div>
+                        
+
+                        
+                            <div class="sg-section navigation-section" id="navigation-example">
+                                <h2 class="sg-section-title">Navigation</h2>
+                                
+
+    
+        <h3 class="sg-section-sub-title">Main navigation</h3>
+        <nav class="site-nav">
+            <ul>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+            </ul>
+        </nav>
+    
+
+    
+        <h3 class="sg-section-sub-title">Sub navigation</h3>
+        <nav class="sub-nav">
+            <ul>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+            </ul>
+        </nav>
+    
+
+
+
+                            </div>
+                        
+
                     
                 </section>
             
 
             
+                <section class="sg-ux-elements" id="ux-section">
+                    <h2 class="sg-main-section-title">UX Elements</h2>
+                    
+
+                        
+                            <div class="sg-section transitions-section" id="transitions-example">
+                                <h2 class="sg-section-title">Transitions</h2>
+                                
+
+    
+        <h3 class="sg-section-sub-title">Hover transitions</h3>
+
+        
+            <p>A paragraph you can use to describe your hover transitions on buttons / links etc</p>
+        
+
+        
+            <button>Button hover</button>
+
+            <a href="/">Link hover</a>
+        
+
+        
+
+    
+
+    
+
+
+
+                            </div>
+                        
+
+                        
+                            <div class="sg-section expanding-collapsing-section" id="expanding-collapsing-example">
+                                <h2 class="sg-section-title">Expanding / collapsing content</h2>
+                                
+
+    
+        <p>A paragraph you can use to describe your expanding / collapsing content - how and when it is used.</p>
+    
+
+    
+
+        <article class="expanding-content">
+            <header>
+                <h3>Expanding content example</h3>
+                <span class="button button-show"></span>
+            </header>
+            <div class="content">Expanding content inner</div>
+        </article>
+
+    
+
+    
+
+
+
+                            </div>
+                        
+
+                        
+                            <div class="sg-section ui-elements-section" id="ui-elements-example">
+                                <h2 class="sg-section-title">UI-elements</h2>
+                                
+
+    
+        <p>A paragraph you can use to talk about interactive elements on your site.</p>
+    
+
+    
+        <h3 class="sg-section-sub-title">View toggle</h3>
+
+        <div class="toggle-buttons">
+            <button class="view-button view-one">
+                <span translate>View one</span>
+            </button>
+            <button class="view-button view-two">
+                <span translate>View two</span>
+            </button>
+        </div>
+    
+
+    
+        <h3 class="sg-section-sub-title">Switch</h3>
+
+        <div class="switch-wrapper">
+            <div class="switch">
+                <div class="option">Option one</div>
+                <div class="option">Option two</div>
+           </div>
+        </div>
+    
+
+    
+
+
+
+                            </div>
+                        
+
+                    
+                </section>
+            
 
         </main>
 
-        <footer class="page-footer">
+        <footer class="sg-footer">
             
                 <div class="structure">
-                    <p class="copyright">Incuna-style-guide maintained by <a href="https://github.com/incuna">Incuna Ltd.</a></p>
+                    <p class="sg-copyright">Incuna-style-guide maintained by <a href="https://github.com/incuna">Incuna Ltd.</a></p>
                 </div>
             
         </footer>
