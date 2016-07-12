@@ -38,7 +38,7 @@
     var positionTopButton = function () {
         windowTop = $(window).scrollTop();
         windowPosition = $(window).scrollTop() + $(window).height();
-        footerPosition = $(document).height() - $('.page-footer').height();
+        footerPosition = $(document).height() - $('.sg-footer').height();
         buttonPosition = 'absolute';
         rightPos = 0;
 
@@ -71,7 +71,7 @@
 
         $(window).on('scroll', throttle(positionTopButton, debounceInterval));
 
-        $(document).on('click', '.scrollable-nav a, .back-to-top', function (e) {
+        $(document).on('click', '.scrollable-links a, .back-to-top', function (e) {
             e.preventDefault();
             performScroll($(this).attr('href'));
         });

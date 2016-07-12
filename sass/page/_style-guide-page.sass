@@ -1,76 +1,73 @@
-body
+.style-guide-page
     font:
         family: 'Lato', sans-serif
     *
         box-sizing: border-box
 
-.structure
-    max-width: $site-width
-    margin: 0 auto
-    position: relative
-    padding: 0 $site-small-padding
+    .structure
+        max-width: $site-width
+        margin: 0 auto
+        position: relative
+        padding: 0 $site-small-padding
 
-.page-header,
-.page-footer
+.sg-header,
+.sg-footer
     .structure
         padding: 60px $site-small-padding
 
-.page-header
-    @include background(linear-gradient(top, #373737, #212121))
+.sg-header
+    background: $grey-10
 
-.title,
-.tagline
-    color: #fff
-    text-shadow: #111 0px 0px 10px
+.sg-footer
+    background: $grey-10
+    color: $white
+    margin:
+        top: 100px
+    a
+        color: $white
 
-.title
+.sg-title,
+.sg-tagline
+    color: $white
+    text-shadow: 0px 0px 10px $grey-11
+
+.sg-title
     font:
         size: 42px
         weight: 700
 
-.tagline
+.sg-tagline
     font:
         size: 24px
         weight: 300
 
-.main-content-wrap
-    background: #eee
-    border-top: 1px solid #111
-    border-bottom: 1px solid #111
+.sg-main-content
+    padding-top: 40px
 
-.main-content
-    padding: 40px 0
-
-.page-footer
-    background: #212121
-    color: #fff
-    margin:
-        top: 60px
-
-.main-section-title,
-.section-title,
-.section-sub-title
+.sg-main-section-title,
+.sg-section-title,
+.sg-section-sub-title
     padding:
         bottom: 10px
 
-.main-section-title
+.sg-main-section-title
     border:
         bottom: 3px solid $grey-4
     margin:
         bottom: 40px
     text-align: center
 
-.section-title
+.sg-section-title
     border:
         bottom: 2px solid $grey-3
 
-.section-sub-title
+.sg-section-sub-title
     border:
         bottom: 1px solid $grey-2
     margin:
         top: 30px
 
-.section
+.sg-section
     margin:
         bottom: 40px
 
@@ -94,6 +91,6 @@ body
     text-decoration: none
     text-transform: uppercase
 
-
+// temporary style
 .open
     background: red
