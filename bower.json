@@ -9,7 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "bourbon": "*",
-    "incuna-sass": "5.2.3"
+    "incuna-sass": "5.5.1"
   },
   "devDependencies": {
     "incuna-transitions": "incuna/incuna-transitions#1.4.2"
