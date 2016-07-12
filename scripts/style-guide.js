@@ -1,12 +1,12 @@
 (function ($, _) {
     'use strict';
 
-    var topButton = $('.back-to-top');
+    var topButton;
     var windowPosition;
     var footerPosition;
     var footerIsVisible;
     var buttonPosition;
-    var debounceInterval = 100;
+    var debounceInterval = 50;
     var scrollableAreaTop;
     var windowTop;
     var showTopButtonTrigger;
@@ -41,20 +41,19 @@
         footerPosition = $(document).height() - $('.page-footer').height();
         buttonPosition = 'absolute';
         rightPos = 0;
-        
-        if (windowPosition < footerPosition) {
-            buttonPosition = 'fixed';
-            rightPos = ($(window).width() - $('.components').width()) / 2;
-        }
 
         if (windowTop < showTopButtonTrigger)
         {
             $('.back-to-top').hide();
         } else {
-            $('.back-to-top').show();
-        }
 
-        $('.back-to-top').css('position', buttonPosition).css('right', rightPos);
+            if (windowPosition < footerPosition) {
+                buttonPosition = 'fixed';
+                rightPos = ($(window).width() - $('.main-content').outerWidth()) / 2;
+            }
+
+            $(topButton).css('position', buttonPosition).css('right', rightPos).show();
+        }
     };
 
     var performScroll = function (target) {
@@ -65,8 +64,10 @@
     };
 
     $(document).ready(function () {
+        topButton = $('.back-to-top');
         scrollableAreaTop = $('#jump-top').offset().top;
         showTopButtonTrigger = scrollableAreaTop + $(topButton).height();
+        positionTopButton();
 
         $(window).on('scroll', throttle(positionTopButton, debounceInterval));
 

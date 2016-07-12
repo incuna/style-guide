@@ -39,13 +39,13 @@ body
     border-bottom: 1px solid #111
 
 .main-content
-    padding-top: 40px
+    padding: 40px 0
 
 .page-footer
     background: #212121
     color: #fff
     margin:
-        top: 100px
+        top: 60px
 
 .main-section-title,
 .section-title,
@@ -75,17 +75,25 @@ body
         bottom: 40px
 
 .back-to-top
+    // essential styles
+    position: fixed
+    right: 0
+
+    // styles specifically for the back-to-top button
+    bottom: 20px
+    margin:
+        right: $site-small-padding
+
+    // temporary button styles
     background: $white
     border: 2px solid
     font:
         size: 12px
         weight: bold
     padding: 3px 6px
-    position: fixed
-    bottom: 20px
-    right: 0
     text-decoration: none
     text-transform: uppercase
+
 
 .open
     background: red

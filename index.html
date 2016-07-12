@@ -6,6 +6,8 @@
         <meta name="description" content="Incuna-style-guide: Living CSS Style Guide from Incuna Ltd.">
 
         <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="scripts/style-guide.js"></script>
 
         <title>Style Guide</title>
     </head>
@@ -30,9 +32,9 @@
                     </p>
                 
                 
-                    <h3>Jump to a section:</h3>
+                    <h3 id="jump-top">Jump to a section:</h3>
                     <h4>Components</h4>
-                    <ul>
+                    <ul class="scrollable-nav">
                         
                             <li><a href="#colors-example">Colors</a></li>
                         
@@ -566,7 +568,9 @@
             
 
             
-
+            <a class="back-to-top" href="#jump-top">Back to Top</a>
+            <a class="toggle-open" href="#">Toggle Open</a>
+            <div class="toggle-open" href="#">Toggle Open</div>
         </main>
 
         <footer class="page-footer">
