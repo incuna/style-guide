@@ -12,6 +12,7 @@
     "incuna-sass": "5.2.3"
   },
   "devDependencies": {
+    "jquery": "2.2.1",
     "incuna-transitions": "incuna/incuna-transitions#1.4.2"
   },
   "ignore": [
