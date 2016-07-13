@@ -19,159 +19,205 @@
             </div>
         </header>
 
-        <main class="sg-main-content structure">
+        <main class="sg-main-content">
 
             <section class="sg-intro">
                 {% block intro-text %}
-                    <p class="sg-intro-text">
+                    <p class="sg-intro-text structure">
                         <span>When styling a new section or element on </span>
                         <span class="sg-project-name">{% block project-name %}this project{% endblock project-name %}, </span>
                         <span>please refer to the guide below. Stick to the colour palette when possible - if a colour doesn't exist here, check with the designer whether an existing colour can be used, or a new one needs to be added. Try to avoid unecessary repetition</span>
                     </p>
                 {% endblock intro-text %}
                 {% block section-nav %}
-                    <h3>Jump to a section:</h3>
-                    <h4><a href="#components-section">Components</h4>
-                    <ul>
-                        {% block nav-item-colors %}
-                            <li><a href="#colors-example">Colors</a></li>
-                        {% endblock nav-item-colors %}
-                        {% block nav-item-buttons %}
-                            <li><a href="#buttons-example">Buttons</a></li>
-                        {% endblock nav-item-buttons %}
-                        {% block nav-item-icons %}
-                            <li><a href="#icons-example">Icons</a></li>
-                        {% endblock nav-item-icons %}
-                        {% block nav-item-typography %}
-                            <li><a href="#typography-example">Typography</a></li>
-                        {% endblock nav-item-typography %}
-                        {% block nav-item-lists %}
-                            <li><a href="#lists-example">lists</a></li>
-                        {% endblock nav-item-lists %}
-                        {% block nav-item-tables %}
-                            <li><a href="#tables-example">Tables</a></li>
-                        {% endblock nav-item-tables %}
-                        {% block nav-item-forms %}
-                            <li><a href="#forms-example">Form elements</a></li>
-                        {% endblock nav-item-forms %}
-                        {% block nav-item-messages %}
-                            <li><a href="#messages-example">messages</a></li>
-                        {% endblock nav-item-messages %}
-                    </ul>
-                    {% block additional-sections %}
-                        <h4><a href="#page-section">Page elements</h4>
+                    <nav class="sg-section-nav structure">
+                        <h3>Jump to a section:</h3>
+                        <h4><a href="#components-section">Components</a></h4>
                         <ul>
-                            {% block nav-item-page-titles %}
-                                <li><a href="#page-titles-example">page-titles</a></li>
-                            {% endblock nav-item-page-titles %}
-                            {% block nav-item-widgets %}
-                                <li><a href="#widgets-example">widgets</a></li>
-                            {% endblock nav-item-widgets %}
-                            {% block nav-item-navigation %}
-                                <li><a href="#navigation-example">navigation</a></li>
-                            {% endblock nav-item-navigation %}
+                            {% block nav-item-colors %}
+                                <li><a href="#colors-example">Colors</a></li>
+                            {% endblock nav-item-colors %}
+                            {% block nav-item-buttons %}
+                                <li><a href="#buttons-example">Buttons</a></li>
+                            {% endblock nav-item-buttons %}
+                            {% block nav-item-icons %}
+                                <li><a href="#icons-example">Icons</a></li>
+                            {% endblock nav-item-icons %}
+                            {% block nav-item-typography %}
+                                <li><a href="#typography-example">Typography</a></li>
+                            {% endblock nav-item-typography %}
+                            {% block nav-item-lists %}
+                                <li><a href="#lists-example">lists</a></li>
+                            {% endblock nav-item-lists %}
+                            {% block nav-item-tables %}
+                                <li><a href="#tables-example">Tables</a></li>
+                            {% endblock nav-item-tables %}
+                            {% block nav-item-forms %}
+                                <li><a href="#forms-example">Form elements</a></li>
+                            {% endblock nav-item-forms %}
+                            {% block nav-item-messages %}
+                                <li><a href="#messages-example">messages</a></li>
+                            {% endblock nav-item-messages %}
                         </ul>
-                        <h4><a href="#ux-section">UX elements</h4>
-                        <ul>
-                            {% block nav-item-transitions %}
-                                <li><a href="#transitions-example">transitions</a></li>
-                            {% endblock nav-item-transitions %}
-                            {% block nav-item-expanding-collapsing %}
-                                <li><a href="#expanding-collapsing-example">expanding-collapsing</a></li>
-                            {% endblock nav-item-expanding-collapsing %}
-                            {% block nav-item-ui-elements %}
-                                <li><a href="#ui-elements-example">ui-elements</a></li>
-                            {% endblock nav-item-ui-elements %}
-                        </ul>
+                        {% block additional-sections %}
+                            <h4><a href="#page-section">Page elements</a></h4>
+                            <ul>
+                                {% block nav-item-page-titles %}
+                                    <li><a href="#page-titles-example">page-titles</a></li>
+                                {% endblock nav-item-page-titles %}
+                                {% block nav-item-widgets %}
+                                    <li><a href="#widgets-example">widgets</a></li>
+                                {% endblock nav-item-widgets %}
+                                {% block nav-item-navigation %}
+                                    <li><a href="#navigation-example">navigation</a></li>
+                                {% endblock nav-item-navigation %}
+                            </ul>
+                            <h4><a href="#ux-section">UX elements</h4>
+                            <ul>
+                                {% block nav-item-transitions %}
+                                    <li><a href="#transitions-example">transitions</a></li>
+                                {% endblock nav-item-transitions %}
+                                {% block nav-item-expanding-collapsing %}
+                                    <li><a href="#expanding-collapsing-example">expanding-collapsing</a></li>
+                                {% endblock nav-item-expanding-collapsing %}
+                                {% block nav-item-ui-elements %}
+                                    <li><a href="#ui-elements-example">ui-elements</a></li>
+                                {% endblock nav-item-ui-elements %}
+                            </ul>
+                        </nav>
                     {% endblock additional-sections %}
 
                 {% endblock section-nav %}
             </section>
 
-            <section class="sg-components" id="components-section">
+            <section class="sg-main-section sg-components" id="components-section">
                 <h2 class="sg-main-section-title">Components</h2>
 
                 {% block colors %}
-                    <div class="sg-section colors-section" id="colors-example">
-                        <h2 class="sg-section-title">Colors</h2>
-                        {% include 'components/colors.html' %}
-                    </div>
+                    <section class="sg-section colors-section" id="colors-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Colors</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            {% include 'components/colors.html' %}
+                        </div>
+                    </section>
                 {% endblock colors %}
 
                 {% block buttons %}
-                    <div class="sg-section buttons-section" id="buttons-example">
-                        <h2 class="sg-section-title">Buttons</h2>
-                        {% include 'components/buttons.html' %}
-                    </div>
+                    <section class="sg-section buttons-section" id="buttons-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Buttons</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            {% include 'components/buttons.html' %}
+                        </div>
+                    </section>
                 {% endblock buttons %}
 
                 {% block icons %}
-                    <div class="sg-section icons-section" id="icons-example">
-                        <h2 class="sg-section-title">Icons</h2>
-                        {% include 'components/icons.html' %}
-                    </div>
+                    <section class="sg-section icons-section" id="icons-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Icons</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            {% include 'components/icons.html' %}
+                        </div>
+                    </section>
                 {% endblock icons %}
 
                 {% block typography %}
-                    <div class="sg-section typography-section" id="typography-example">
-                        <h2 class="sg-section-title">Typography</h2>
-                        {% include 'components/typography.html' %}
-                    </div>
+                    <section class="sg-section typography-section" id="typography-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Typography</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            {% include 'components/typography.html' %}
+                        </div>
+                    </section>
                 {% endblock typography %}
 
                 {% block lists %}
-                    <div class="sg-section lists-section" id="lists-example">
-                        <h2 class="sg-section-title">Lists</h2>
-                        {% include 'components/lists.html' %}
-                    </div>
+                    <section class="sg-section lists-section" id="lists-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Lists</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            {% include 'components/lists.html' %}
+                        </div>
+                    </section>
                 {% endblock lists %}
 
                 {% block tables %}
-                    <div class="sg-section tables-section" id="tables-example">
-                        <h2 class="sg-section-title">Tables</h2>
-                        {% include 'components/tables.html' %}
-                    </div>
+                    <section class="sg-section tables-section" id="tables-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Tables</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            {% include 'components/tables.html' %}
+                        </div>
+                    </section>
                 {% endblock tables %}
 
                 {% block forms %}
-                    <div class="sg-section forms-section" id="forms-example">
-                        <h2 class="sg-section-title">Forms</h2>
-                        {% include 'components/forms.html' %}
-                    </div>
+                    <section class="sg-section forms-section" id="forms-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Forms</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            {% include 'components/forms.html' %}
+                        </div>
+                    </section>
                 {% endblock forms %}
 
                 {% block messages %}
-                    <div class="sg-section messages-section" id="messages-example">
-                        <h2 class="sg-section-title">Messages</h2>
-                        {% include 'components/messages.html' %}
-                    </div>
+                    <section class="sg-section messages-section" id="messages-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Messages</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            {% include 'components/messages.html' %}
+                        </div>
+                    </section>
                 {% endblock messages %}
             </section>
 
             {% block page-block %}
-                <section class="sg-page-elements" id="page-section">
+                <section class="sg-main-section sg-page-elements" id="page-section">
                     <h2 class="sg-main-section-title">Page Elements</h2>
                     {% block page-block-inner %}
 
                         {% block page-titles %}
-                            <div class="sg-section page-titles-section" id="page-titles-example">
-                                <h2 class="sg-section-title">Page-titles</h2>
-                                {% include 'page-elements/page-titles.html' %}
-                            </div>
+                            <section class="sg-section page-titles-section" id="page-titles-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Page-titles</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    {% include 'page-elements/page-titles.html' %}
+                                </div>
+                            </section>
                         {% endblock page-titles %}
 
                         {% block widgets %}
-                            <div class="sg-section widgets-section" id="widgets-example">
-                                <h2 class="sg-section-title">Widgets</h2>
-                                {% include 'page-elements/widgets.html' %}
-                            </div>
+                            <section class="sg-section widgets-section" id="widgets-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Widgets</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    {% include 'page-elements/widgets.html' %}
+                                </div>
+                            </section>
                         {% endblock widgets %}
 
                         {% block navigation %}
-                            <div class="sg-section navigation-section" id="navigation-example">
-                                <h2 class="sg-section-title">Navigation</h2>
-                                {% include 'page-elements/navigation.html' %}
-                            </div>
+                            <section class="sg-section navigation-section" id="navigation-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Navigation</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    {% include 'page-elements/navigation.html' %}
+                                </div>
+                            </section>
                         {% endblock navigation %}
 
                     {% endblock page-block-inner %}
@@ -179,29 +225,41 @@
             {% endblock page-block %}
 
             {% block ux-block %}
-                <section class="sg-ux-elements" id="ux-section">
+                <section class="sg-main-section sg-ux-elements" id="ux-section">
                     <h2 class="sg-main-section-title">UX Elements</h2>
                     {% block uxinner %}
 
                         {% block transitions %}
-                            <div class="sg-section transitions-section" id="transitions-example">
-                                <h2 class="sg-section-title">Transitions</h2>
-                                {% include 'ux-elements/transitions.html' %}
-                            </div>
+                            <section class="sg-section transitions-section" id="transitions-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Transitions</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    {% include 'ux-elements/transitions.html' %}
+                                </div>
+                            </section>
                         {% endblock transitions %}
 
                         {% block expanding-coallpsing %}
-                            <div class="sg-section expanding-collapsing-section" id="expanding-collapsing-example">
-                                <h2 class="sg-section-title">Expanding / collapsing content</h2>
-                                {% include 'ux-elements/expanding-collapsing.html' %}
-                            </div>
+                            <section class="sg-section expanding-collapsing-section" id="expanding-collapsing-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Expanding / collapsing content</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    {% include 'ux-elements/expanding-collapsing.html' %}
+                                </div>
+                            </section>
                         {% endblock expanding-coallpsing %}
 
                         {% block ui-elements %}
-                            <div class="sg-section ui-elements-section" id="ui-elements-example">
-                                <h2 class="sg-section-title">UI-elements</h2>
-                                {% include 'ux-elements/ui-elements.html' %}
-                            </div>
+                            <section class="sg-section ui-elements-section" id="ui-elements-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">UI-elements</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    {% include 'ux-elements/ui-elements.html' %}
+                                </div>
+                            </section>
                         {% endblock ui-elements %}
 
                     {% endblock uxinner %}
