@@ -1,0 +1,100 @@
+.style-guide-page
+    font:
+        family: 'Lato', sans-serif
+    *
+        box-sizing: border-box
+
+    .structure
+        max-width: $site-width
+        margin: 0 auto
+        position: relative
+        padding: 0 $site-small-padding
+
+.sg-header,
+.sg-footer
+    .structure
+        padding: 60px $site-small-padding
+
+.sg-header
+    background: $grey-10
+
+.sg-footer
+    background: $grey-10
+    color: $white
+    margin:
+        top: 100px
+    a
+        color: $white
+
+.sg-title,
+.sg-tagline
+    color: $white
+    text-shadow: 0px 0px 10px $grey-11
+
+.sg-title
+    font:
+        size: 42px
+        weight: 700
+
+.sg-tagline
+    font:
+        size: 24px
+        weight: 300
+
+.sg-main-content
+    padding:
+        top: 40px
+    position: relative
+
+.sg-intro
+    padding:
+        bottom: 40px
+    border:
+        bottom: 3px solid $grey-3
+
+.sg-main-section-title,
+.sg-section-header,
+.sg-section-sub-title
+    padding:
+        bottom: 10px
+
+.sg-main-section-title
+    border:
+        bottom: 3px solid $grey-3
+    margin:
+        top: 20px
+        bottom: 60px
+    padding:
+        bottom: 20px
+    text-align: center
+
+.sg-section-header
+    border:
+        bottom: 2px solid $grey-3
+
+.sg-section-sub-title
+    border:
+        bottom: 1px solid $grey-3
+    margin:
+        top: 30px
+
+.sg-section
+    margin:
+        bottom: 60px
+
+.sg-main-section
+    padding:
+        bottom: 40px
+    border:
+        bottom: 3px solid $grey-3
+
+    &:last-of-type
+        border: 0
+
+.back-to-top
+    position: fixed
+    bottom: 20px
+    right: 0
+
+.open
+    background: red

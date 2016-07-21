@@ -6,79 +6,111 @@
         <meta name="description" content="Incuna-style-guide: Living CSS Style Guide from Incuna Ltd.">
 
         <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="scripts/scroll-to-top.js"></script>
 
         <title>Style Guide</title>
     </head>
 
-    <body class="style-guide-base">
+    <body class="style-guide-page">
 
-        <header class="page-header">
+        <header class="sg-header">
             <div class="structure">
-                <h1 class="title">Style Guide</h1>
-                <h2 class="tagline">Living style guide from Incuna Ltd.</h2>
+                <h1 class="sg-title">Style Guide</h1>
+                <h2 class="sg-tagline">Living style guide from Incuna Ltd.</h2>
             </div>
         </header>
 
-        <main class="main-content structure">
+        <main class="sg-main-content">
 
-            <section class="intro">
+            <section class="sg-intro">
                 
-                    <p class="intro-text">
+                    <p class="sg-intro-text structure">
                         <span>When styling a new section or element on </span>
-                        <span class="project-name">this project, </span>
+                        <span class="sg-project-name">this project, </span>
                         <span>please refer to the guide below. Stick to the colour palette when possible - if a colour doesn't exist here, check with the designer whether an existing colour can be used, or a new one needs to be added. Try to avoid unecessary repetition</span>
                     </p>
                 
                 
-                    <h3>Jump to a section:</h3>
-                    <h4>Components</h4>
-                    <ul>
-                        
-                            <li><a href="#colors-example">Colors</a></li>
-                        
-                        
-                            <li><a href="#buttons-example">Buttons</a></li>
-                        
-                        
-                            <li><a href="#icons-example">Icons</a></li>
-                        
-                        
-                            <li><a href="#typography-example">Typography</a></li>
-                        
-                        
-                            <li><a href="#lists-example">lists</a></li>
-                        
-                        
-                            <li><a href="#tables-example">Tables</a></li>
-                        
-                        
-                            <li><a href="#forms-example">Form elements</a></li>
-                        
-                        
-                            <li><a href="#notifications-example">Notification styles</a></li>
-                        
-                    </ul>
-                    
 
+                    <nav class="sg-section-nav sg-jump-top structure">
+                        <h3 id="jump-top">Jump to a section:</h3>
+                        <h4><a href="#components-section">Components</a></h4>
+                        <ul>
+                            
+                                <li><a href="#colors-example">Colors</a></li>
+                            
+                            
+                                <li><a href="#buttons-example">Buttons</a></li>
+                            
+                            
+                                <li><a href="#icons-example">Icons</a></li>
+                            
+                            
+                                <li><a href="#typography-example">Typography</a></li>
+                            
+                            
+                                <li><a href="#lists-example">lists</a></li>
+                            
+                            
+                                <li><a href="#tables-example">Tables</a></li>
+                            
+                            
+                                <li><a href="#forms-example">Form elements</a></li>
+                            
+                            
+                                <li><a href="#messages-example">messages</a></li>
+                            
+                        </ul>
+                        
+                            <h4><a href="#page-section">Page elements</a></h4>
+                            <ul>
+                                
+                                    <li><a href="#page-titles-example">page-titles</a></li>
+                                
+                                
+                                    <li><a href="#widgets-example">widgets</a></li>
+                                
+                                
+                                    <li><a href="#navigation-example">navigation</a></li>
+                                
+                            </ul>
+                            <h4><a href="#ux-section">UX elements</h4>
+                            <ul>
+                                
+                                    <li><a href="#transitions-example">transitions</a></li>
+                                
+                                
+                                    <li><a href="#expanding-collapsing-example">expanding-collapsing</a></li>
+                                
+                                
+                                    <li><a href="#ui-elements-example">ui-elements</a></li>
+                                
+                            </ul>
+                        </nav>
+                    
                 
             </section>
 
-            <section class="components">
-                <h2 class="main-section-title">Components</h2>
+            <section class="sg-main-section sg-components" id="components-section">
+                <h2 class="sg-main-section-title">Components</h2>
 
                 
-                    <div class="section colors-section" id="colors-example">
-                        <h2 class="section-title">Colors</h2>
-                        
+                    <section class="sg-section colors-section" id="colors-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Colors</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            
 
-    <h3 class="section-sub-title">Color usage</h3>
+    <h3 class="sg-section-sub-title">Color usage</h3>
 
     
         <p>When using a colour in a sass file, please try to use a descriptive variable name not the colour name itself. This will allow for easy reskinning in future.</p>
     
 
     
-        <h3 class="section-sub-title">Main colors</h3>
+        <h3 class="sg-section-sub-title">Main colors</h3>
 
         
             <div class="color color1">
@@ -138,7 +170,7 @@
     
 
     
-        <h3 class="section-sub-title">Greys</h3>
+        <h3 class="sg-section-sub-title">Greys</h3>
 
         <div class="color grey-1">
             <p class="color-name">grey-1</p>
@@ -209,22 +241,26 @@
 
 
 
-                    </div>
+                        </div>
+                    </section>
                 
 
                 
-                    <div class="section buttons-section" id="buttons-example">
-                        <h2 class="section-title">Buttons</h2>
-                        
+                    <section class="sg-section buttons-section" id="buttons-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Buttons</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            
 
-    <h3 class="section-sub-title">Button usage</h3>
+    <h3 class="sg-section-sub-title">Button usage</h3>
 
     
         <p>A paragraph of text you can use to explain how your button styles work</p>
     
 
     
-        <h3 class="section-sub-title">Button Exmaples</h3>
+        <h3 class="sg-section-sub-title">Button Exmaples</h3>
 
         
             <button>Basic button</button>
@@ -251,22 +287,26 @@
 
 
 
-                    </div>
+                        </div>
+                    </section>
                 
 
                 
-                    <div class="section icons-section" id="icons-example">
-                        <h2 class="section-title">Icons</h2>
-                        
+                    <section class="sg-section icons-section" id="icons-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Icons</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            
 
-    <h3 class="section-sub-title">Icon usage</h3>
+    <h3 class="sg-section-sub-title">Icon usage</h3>
 
     
         <p>When using a colour in a sass file, please try to use a descriptive variable name not the colour name itself. This will allow for easy reskinning in future.</p>
     
 
     
-        <h3 class="section-sub-title">Available icons</h3>
+        <h3 class="sg-section-sub-title">Available icons</h3>
 
         
             <div class="icon alert">
@@ -294,16 +334,20 @@
 
 
 
-                    </div>
+                        </div>
+                    </section>
                 
 
                 
-                    <div class="section typography-section" id="typography-example">
-                        <h2 class="section-title">Typography</h2>
-                        
+                    <section class="sg-section typography-section" id="typography-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Typography</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            
 
     
-        <h3 class="section-sub-title">Fonts</h3>
+        <h3 class="sg-section-sub-title">Fonts</h3>
         <p>The following fonts are available for use on this project</p>
         
             <p>
@@ -344,7 +388,7 @@
     
 
     
-        <h3 class="section-sub-title">Font usage</h3>
+        <h3 class="sg-section-sub-title">Font usage</h3>
 
         <h1>Heading 1 Example</h1>
         <h2>Heading 2 Example</h2>
@@ -364,7 +408,7 @@
     
 
     
-        <h3 class="section-sub-title">Links</h3>
+        <h3 class="sg-section-sub-title">Links</h3>
 
         
             <p>Make meme, make cute face spread kitty litter all over house but all of a sudden cat goes crazy scratch leg <a href="">This is an inline text link</a> knock dish off table head butt</p>
@@ -385,16 +429,20 @@
 
 
 
-                    </div>
+                        </div>
+                    </section>
                 
 
                 
-                    <div class="section lists-section" id="lists-example">
-                        <h2 class="section-title">Lists</h2>
-                        
+                    <section class="sg-section lists-section" id="lists-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Lists</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            
 
     
-        <h3 class="section-sub-title">Unordered Lists</h3>
+        <h3 class="sg-section-sub-title">Unordered Lists</h3>
 
         <ul>
             <li>List item example</li>
@@ -412,7 +460,7 @@
     
 
     
-        <h3 class="section-sub-title">Ordered Lists</h3>
+        <h3 class="sg-section-sub-title">Ordered Lists</h3>
 
         <ol>
             <li>List item example</li>
@@ -432,16 +480,20 @@
 
 
 
-                    </div>
+                        </div>
+                    </section>
                 
 
                 
-                    <div class="section tables-section" id="tables-example">
-                        <h2 class="section-title">Tables</h2>
-                        
+                    <section class="sg-section tables-section" id="tables-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Tables</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            
 
     
-        <h3 class="section-sub-title">Table Elements</h3>
+        <h3 class="sg-section-sub-title">Table Elements</h3>
 
         <table>
             
@@ -498,7 +550,7 @@
     
 
     
-        <h3 class="section-sub-title">Table Classes</h3>
+        <h3 class="sg-section-sub-title">Table Classes</h3>
 
         <div class="table">
             
@@ -540,39 +592,508 @@
 
 
 
-                    </div>
+                        </div>
+                    </section>
                 
 
                 
-                    <div class="section forms-section" id="forms-example">
-                        <h2 class="section-title">Forms</h2>
-                        
+                    <section class="sg-section forms-section" id="forms-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Forms</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            
+
+    
+        <h3 class="section-sub-title">Example Form</h3>
+
+        <form action="" method="post">
+            <div class="error-block form-error">
+                <p class="error">This is an example form error</p>
+            </div>
+
+            
+                <fieldset class="text-fieldset">
+                    <div class="control-group text required">
+                        <label for="field-name" class="control-label">
+                            Text input
+                            <span class="asterisk">*</span>
+                        </label>
+                        <div class="controls">
+                            <input class="text-input" id="field-name" type="text" name="name" placeholder="Text input" aria-required="true">
+                        </div>
                     </div>
+
+                    <div class="control-group email required">
+                        <label for="field-email" class="control-label">
+                            Email input
+                            <span class="asterisk">*</span>
+                        </label>
+                        <div class="controls">
+                            <input class="email-input" id="field-email" type="email" name="email" placeholder="Email input" aria-required="true">
+                            <div class="error-block field-error">
+                                <p class="error">This is an example field error</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group tel">
+                        <label for="field-tel" class="control-label">
+                            Telephone number input
+                        </label>
+                        <div class="controls">
+                            <input class="text-input" id="field-tel" type="tel" name="tel" placeholder="Telephone number input" aria-required="false">
+                        </div>
+                    </div>
+
+                    <div class="control-group password required">
+                        <label for="field-password" class="control-label">
+                            Password input
+                            <span class="asterisk">*</span>
+                        </label>
+                        <div class="controls">
+                            <!-- ideally we would have some nicer more interactive password verficiation stuff here -->
+                            <input class="text-input" id="field-password" type="password" name="password" placeholder="Password input" aria-required="true">
+                            <p class="field-help-text">Passwords should be 8 characters or more and contain at least one uppercase letter, one lowercase letter, and one number</p>
+                        </div>
+                    </div>
+
+                    <div class="control-group number">
+                        <label for="field-number" class="control-label">
+                            Number input
+                        </label>
+                        <div class="controls">
+                            <input class="text-input" id="field-number" type="number" name="number" placeholder="Number input" aria-required="false">
+                        </div>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="textarea-fieldset">
+                    <div class="control-group textarea">
+                        <label class="textarea-label">Textarea</label>
+                        <textarea class="textarea-input" name="textarea" placeholder="Text area"></textarea>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="radio-fieldset">
+                    <div class="control-group radio required">
+                        <label class="control-label">
+                            A question with radio answers
+                            <span class="asterisk">*</span>
+                        </label>
+                        <div class="controls">
+                            <div class="checkable radio">
+                                <input class="radio-input" type="radio" name="example" id="radio-example-1">
+                                <label class="radio-label" for="radio-example-1">Panda</label>
+                            </div>
+                            <div class="checkable radio">
+                                <input class="radio-input" type="radio" name="example" id="radio-example-2">
+                                <label class="radio-label" for="radio-example-2">Platypus</label>
+                            </div>
+                            <div class="checkable radio">
+                                <input class="radio-input" type="radio" name="example" id="radio-example-3">
+                                <label class="radio-label" for="radio-example-3">Porcupine</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="checkbox-fieldset">
+                    <div class="control-group checkbox">
+                        <div class="controls">
+                            <input class="checkbox-input" id="single-checkbox" name="single-checkbox" type="checkbox">
+                            <label for="single-checkbox" class="checkbox-label">
+                                Single checkbox example.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group checkbox">
+                        <label class="control-label">A group of checkboxes</label>
+                        <div class="controls">
+                            <div class="checkable checkbox">
+                                <input class="checkbox-input" id="group-checkbox-1" name="terms" type="checkbox">
+                                <label class="checkbox-label" for="group-checkbox-1">Panda</label>
+                            </div>
+                            <div class="checkable checkbox">
+                                <input class="checkbox-input" id="group-checkbox-2" name="terms" type="checkbox">
+                                <label class="checkbox-label" for="group-checkbox-2">Platypus</label>
+                            </div>
+                            <div class="checkable checkbox">
+                                <input class="checkbox-input" id="group-checkbox-3" name="terms" type="checkbox">
+                                <label class="checkbox-label" for="group-checkbox-3">Porcupine</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="select-fieldset">
+                    <div class="control-group select">
+                        <label class="select-label">Select field</label>
+                        <select class="select" name="select">
+                            <option value="value1">Value 1</option> 
+                            <option value="value2" selected>Value 2</option>
+                            <option value="value3">Value 3</option>
+                        </select>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="file-fieldset">
+                    <div class="control-group file">
+                        <label class="file-label">File input</label>
+                        <input class="file-input" type="file" name="file">
+                    </div>
+                </fieldset>
+            
+
+            
+
+            
+                <div class="form-actions">
+                    <!-- MUST be a button not an input -->
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            
+        </form>
+    
+
+    
+        <h3 class="section-sub-title">Form Errors</h3>
+
+        
+            <p>Form errors are displayed in various ways as demonstrated below</p>
+        
+
+    
+
+
+
+                        </div>
+                    </section>
                 
 
                 
-                    <div class="section notifications-section" id="notifications-example">
-                        <h2 class="section-title">Notifications</h2>
-                        
-                    </div>
+                    <section class="sg-section messages-section" id="messages-example">
+                        <header class="sg-section-header">
+                            <h2 class="sg-section-title structure">Messages</h2>
+                        </header>
+                        <div class="sg-section-content structure">
+                            
+    <ul class="messages">
+        <li class="message success">Success message</li>
+        <li class="message error">Error message</li>
+        <li class="message info">Info message</li>
+        <li class="message warn">Warn message</li>
+    </ul>
+
+
+                        </div>
+                    </section>
                 
             </section>
 
             
-                <section class="ux-elements">
-                    <h2 class="section-title">UX Elements</h2>
+                <section class="sg-main-section sg-page-elements" id="page-section">
+                    <h2 class="sg-main-section-title">Page Elements</h2>
+                    
+
+                        
+                            <section class="sg-section page-titles-section" id="page-titles-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Page-titles</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    
+
+    <h1 class="page-title">This is an example page title</h1>
+
+
+
+                                </div>
+                            </section>
+                        
+
+                        
+                            <section class="sg-section widgets-section" id="widgets-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Widgets</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    
+
+    
+        <article class="widget standard-widget ">
+            <header class="widget-header">
+                <div class="widget-header-inner">
+                    
+                        <h1 class="widget-title">
+                            <span class="widget-title-inner">Basic widget example</span>
+                        </h1>
+                    
+                </div>
+            </header>
+
+            <section class="widget-body">
+                <div class="widget-body-inner">
+                    
+                        Widget body content
+                    
+                </div>
+            </section>
+
+            <footer class="widget-footer">
+                <div class="widget-footer-inner">
+                    
+                        Widget footer content
+                    
+                </div>
+            </footer>
+        </article>
+    
+
+    
+        <article class="widget standard-widget ">
+            <header class="widget-header">
+                <div class="widget-header-inner">
+                    
+                        <h1 class="widget-title">
+                            <span class="widget-title-inner">Featured widget example</span>
+                        </h1>
+                    
+                </div>
+            </header>
+
+            <section class="widget-body">
+                <div class="widget-body-inner">
+                    
+                        Widget body content
+                    
+                </div>
+            </section>
+
+            <footer class="widget-footer">
+                <div class="widget-footer-inner">
+                    
+                        Widget footer content
+                    
+                </div>
+            </footer>
+        </article>
+    
+
+    
+
+
+
+                                </div>
+                            </section>
+                        
+
+                        
+                            <section class="sg-section navigation-section" id="navigation-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Navigation</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    
+
+    
+        <h3 class="sg-section-sub-title">Main navigation</h3>
+        <nav class="site-nav">
+            <ul>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+            </ul>
+        </nav>
+    
+
+    
+        <h3 class="sg-section-sub-title">Sub navigation</h3>
+        <nav class="sub-nav">
+            <ul>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+                <li>
+                    <a href="/">Nav item</a>
+                </li>
+            </ul>
+        </nav>
+    
+
+
+
+                                </div>
+                            </section>
+                        
+
                     
                 </section>
             
 
             
+                <section class="sg-main-section sg-ux-elements" id="ux-section">
+                    <h2 class="sg-main-section-title">UX Elements</h2>
+                    
 
+                        
+
+                        
+                            <section class="sg-section transitions-section" id="transitions-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Transitions</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    
+
+    
+        <h3 class="sg-section-sub-title">Hover transitions</h3>
+
+        
+            <p>A paragraph you can use to describe your hover transitions on buttons / links etc</p>
+        
+
+        
+            <button>Button hover</button>
+
+            <a href="/">Link hover</a>
+        
+
+        
+
+    
+
+    
+
+
+
+                                </div>
+                            </section>
+                        
+
+                        
+                            <section class="sg-section expanding-collapsing-section" id="expanding-collapsing-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">Expanding / collapsing content</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    
+
+    
+        <p>A paragraph you can use to describe your expanding / collapsing content - how and when it is used.</p>
+    
+
+    
+
+        <article class="expanding-content">
+            <header>
+                <h3>Expanding content example</h3>
+                <span class="button button-show"></span>
+            </header>
+            <div class="content">Expanding content inner</div>
+        </article>
+
+    
+
+    
+
+
+
+                                </div>
+                            </section>
+                        
+
+                        
+                            <section class="sg-section ui-elements-section" id="ui-elements-example">
+                                <header class="sg-section-header">
+                                    <h2 class="sg-section-title structure">UI-elements</h2>
+                                </header>
+                                <div class="sg-section-content structure">
+                                    
+
+    
+        <p>A paragraph you can use to talk about interactive elements on your site.</p>
+    
+
+    
+        <h3 class="sg-section-sub-title">View toggle</h3>
+
+        <div class="toggle-buttons">
+            <button class="view-button view-one">
+                <span translate>View one</span>
+            </button>
+            <button class="view-button view-two">
+                <span translate>View two</span>
+            </button>
+        </div>
+    
+
+    
+        <h3 class="sg-section-sub-title">Switch</h3>
+
+        <div class="switch-wrapper">
+            <div class="switch">
+                <div class="option">Option one</div>
+                <div class="option">Option two</div>
+           </div>
+        </div>
+    
+
+    
+
+
+
+                                </div>
+                            </section>
+                        
+
+                    
+                </section>
+            
+            <button class="back-to-top">Back to Top</button>
         </main>
 
-        <footer class="page-footer">
+        <footer class="sg-footer">
             
                 <div class="structure">
-                    <p class="copyright">Incuna-style-guide maintained by <a href="https://github.com/incuna">Incuna Ltd.</a></p>
+                    <p class="sg-copyright">Incuna-style-guide maintained by <a href="https://github.com/incuna">Incuna Ltd.</a></p>
                 </div>
             
         </footer>

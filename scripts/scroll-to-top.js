@@ -1,87 +1,87 @@
 (function ($, _) {
     'use strict';
 
-    var topButton = $('.back-to-top');
+    var topButton = '.back-to-top';
+    var scrollableAreaTop = '.sg-jump-top';
+    var scrollableLinks = '.sg-section-nav a';
     var windowPosition;
     var footerPosition;
-    var footerIsVisible;
     var buttonPosition;
-    var debounceInterval = 100;
-    var scrollableAreaTop;
+    var scrollableAreaTopOffset;
     var windowTop;
-    var showTopButtonTrigger;
-    var rightPos;
+    var showTopButtonDistance;
+    var throttleInterval = 100;
 
+    // Throttle function from https://remysharp.com/2010/07/21/throttling-function-calls
     function throttle(fn, threshhold, scope) {
       threshhold || (threshhold = 250);
-      var last,
-          deferTimer;
+      var last;
+      var deferTimer;
       return function () {
         var context = scope || this;
 
-        var now = +new Date,
-            args = arguments;
+        var now = +new Date;
+        var args = arguments;
         if (last && now < last + threshhold) {
-          // hold on to it
-          clearTimeout(deferTimer);
-          deferTimer = setTimeout(function () {
+            // hold on to it
+            clearTimeout(deferTimer);
+
+            deferTimer = setTimeout(function () {
             last = now;
-            fn.apply(context, args);
-          }, threshhold + last - now);
-        } else {
-          last = now;
-          fn.apply(context, args);
-        }
-      };
+            fn.apply(context, args); }, 
+            threshhold + last - now); } 
+
+            else {
+                last = now;
+                fn.apply(context, args);
+            }
+        };
     }
 
-    var positionTopButton = function () {
+    var setUpTopButton = function () {
         windowTop = $(window).scrollTop();
         windowPosition = $(window).scrollTop() + $(window).height();
-        footerPosition = $(document).height() - $('.page-footer').height();
+        footerPosition = $(document).height() - $('.sg-footer').height();
         buttonPosition = 'absolute';
-        rightPos = 0;
-        
-        if (windowPosition < footerPosition) {
-            buttonPosition = 'fixed';
-            rightPos = ($(window).width() - $('.components').width()) / 2;
-        }
 
-        if (windowTop < showTopButtonTrigger)
+        if (windowTop < showTopButtonDistance)
         {
-            $('.back-to-top').hide();
+            $(topButton).hide();
         } else {
-            $('.back-to-top').show();
+            if (windowPosition < footerPosition) {
+                buttonPosition = 'fixed';
+            }
+            $(topButton).css('position', buttonPosition).fadeIn('medium');
+            console.log('show button');
         }
-
-        $('.back-to-top').css('position', buttonPosition).css('right', rightPos);
     };
 
     var performScroll = function (target) {
         $('html, body').animate({
             scrollTop: $(target).offset().top
         }, 'medium');
-        positionTopButton();
+        setUpTopButton();
     };
 
     $(document).ready(function () {
-        scrollableAreaTop = $('#jump-top').offset().top;
-        showTopButtonTrigger = scrollableAreaTop + $(topButton).height();
+        scrollableAreaTopOffset = $(scrollableAreaTop).offset().top;
+        showTopButtonDistance = scrollableAreaTopOffset + $(topButton).height();
 
-        $(window).on('scroll', throttle(positionTopButton, debounceInterval));
+        setUpTopButton();
 
-        $(document).on('click', '.scrollable-nav a, .back-to-top', function (e) {
+        $(window).on('scroll', throttle(setUpTopButton, throttleInterval));
+
+        $(document).on('click', scrollableLinks, function (e) {
             e.preventDefault();
             performScroll($(this).attr('href'));
         });
 
-        $(document).on('click', '.toggle-open', function (e) {
-            e.preventDefault();
-            $(this).toggleClass('open');
+        $(document).on('click', topButton, function () {
+            performScroll(scrollableAreaTop);
         });
 
         $(window).on('resize', throttle(function () {
-            positionTopButton();
-        }, debounceInterval));
+            setUpTopButton();
+        }, throttleInterval));
     });
 }(window.jQuery, window._));
