@@ -27,11 +27,11 @@
             clearTimeout(deferTimer);
 
             deferTimer = setTimeout(function () {
-            last = now;
-            fn.apply(context, args); }, 
-            threshhold + last - now); } 
-
-            else {
+                last = now;
+                fn.apply(context, args); 
+            }, 
+            threshhold + last - now);
+        } else {
                 last = now;
                 fn.apply(context, args);
             }
@@ -49,8 +49,7 @@
             $(topButton).hide();
         } else {
             if (windowPosition < footerPosition) {
-                buttonPosition = 'fixed';
-            }
+                buttonPosition = 'fixed'; }
             $(topButton).css('position', buttonPosition).fadeIn('medium');
             console.log('show button');
         }
