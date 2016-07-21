@@ -601,6 +601,180 @@
                         </header>
                         <div class="sg-section-content structure">
                             
+
+    
+        <h3 class="section-sub-title">Example Form</h3>
+
+        <form action="" method="post">
+            <div class="error-block form-error">
+                <p class="error">This is an example form error</p>
+            </div>
+
+            
+                <fieldset class="text-fieldset">
+                    <div class="control-group text required">
+                        <label for="field-name" class="control-label">
+                            Text input
+                            <span class="asterisk">*</span>
+                        </label>
+                        <div class="controls">
+                            <input class="text-input" id="field-name" type="text" name="name" placeholder="Text input" aria-required="true">
+                        </div>
+                    </div>
+
+                    <div class="control-group email required">
+                        <label for="field-email" class="control-label">
+                            Email input
+                            <span class="asterisk">*</span>
+                        </label>
+                        <div class="controls">
+                            <input class="email-input" id="field-email" type="email" name="email" placeholder="Email input" aria-required="true">
+                            <div class="error-block field-error">
+                                <p class="error">This is an example field error</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group tel">
+                        <label for="field-tel" class="control-label">
+                            Telephone number input
+                        </label>
+                        <div class="controls">
+                            <input class="text-input" id="field-tel" type="tel" name="tel" placeholder="Telephone number input" aria-required="false">
+                        </div>
+                    </div>
+
+                    <div class="control-group password required">
+                        <label for="field-password" class="control-label">
+                            Password input
+                            <span class="asterisk">*</span>
+                        </label>
+                        <div class="controls">
+                            <!-- ideally we would have some nicer more interactive password verficiation stuff here -->
+                            <input class="text-input" id="field-password" type="password" name="password" placeholder="Password input" aria-required="true">
+                            <p class="field-help-text">Passwords should be 8 characters or more and contain at least one uppercase letter, one lowercase letter, and one number</p>
+                        </div>
+                    </div>
+
+                    <div class="control-group number">
+                        <label for="field-number" class="control-label">
+                            Number input
+                        </label>
+                        <div class="controls">
+                            <input class="text-input" id="field-number" type="number" name="number" placeholder="Number input" aria-required="false">
+                        </div>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="textarea-fieldset">
+                    <div class="control-group textarea">
+                        <label class="textarea-label">Textarea</label>
+                        <textarea class="textarea-input" name="textarea" placeholder="Text area"></textarea>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="radio-fieldset">
+                    <div class="control-group radio required">
+                        <label class="control-label">
+                            A question with radio answers
+                            <span class="asterisk">*</span>
+                        </label>
+                        <div class="controls">
+                            <div class="checkable radio">
+                                <input class="radio-input" type="radio" name="example" id="radio-example-1">
+                                <label class="radio-label" for="radio-example-1">Panda</label>
+                            </div>
+                            <div class="checkable radio">
+                                <input class="radio-input" type="radio" name="example" id="radio-example-2">
+                                <label class="radio-label" for="radio-example-2">Platypus</label>
+                            </div>
+                            <div class="checkable radio">
+                                <input class="radio-input" type="radio" name="example" id="radio-example-3">
+                                <label class="radio-label" for="radio-example-3">Porcupine</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="checkbox-fieldset">
+                    <div class="control-group checkbox">
+                        <div class="controls">
+                            <input class="checkbox-input" id="single-checkbox" name="single-checkbox" type="checkbox">
+                            <label for="single-checkbox" class="checkbox-label">
+                                Single checkbox example.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group checkbox">
+                        <label class="control-label">A group of checkboxes</label>
+                        <div class="controls">
+                            <div class="checkable checkbox">
+                                <input class="checkbox-input" id="group-checkbox-1" name="terms" type="checkbox">
+                                <label class="checkbox-label" for="group-checkbox-1">Panda</label>
+                            </div>
+                            <div class="checkable checkbox">
+                                <input class="checkbox-input" id="group-checkbox-2" name="terms" type="checkbox">
+                                <label class="checkbox-label" for="group-checkbox-2">Platypus</label>
+                            </div>
+                            <div class="checkable checkbox">
+                                <input class="checkbox-input" id="group-checkbox-3" name="terms" type="checkbox">
+                                <label class="checkbox-label" for="group-checkbox-3">Porcupine</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="select-fieldset">
+                    <div class="control-group select">
+                        <label class="select-label">Select field</label>
+                        <select class="select" name="select">
+                            <option value="value1">Value 1</option> 
+                            <option value="value2" selected>Value 2</option>
+                            <option value="value3">Value 3</option>
+                        </select>
+                    </div>
+                </fieldset>
+            
+
+            
+                <fieldset class="file-fieldset">
+                    <div class="control-group file">
+                        <label class="file-label">File input</label>
+                        <input class="file-input" type="file" name="file">
+                    </div>
+                </fieldset>
+            
+
+            
+
+            
+                <div class="form-actions">
+                    <!-- MUST be a button not an input -->
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            
+        </form>
+    
+
+    
+        <h3 class="section-sub-title">Form Errors</h3>
+
+        
+            <p>Form errors are displayed in various ways as demonstrated below</p>
+        
+
+    
+
+
+
                         </div>
                     </section>
                 
