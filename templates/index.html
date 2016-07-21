@@ -23,7 +23,7 @@
 
         <main class="sg-main-content">
 
-            <section class="sg-intro">
+            <section class="sg-intro scrollable-links">
                 {% block intro-text %}
                     <p class="sg-intro-text structure">
                         <span>When styling a new section or element on </span>
@@ -32,9 +32,8 @@
                     </p>
                 {% endblock intro-text %}
                 {% block section-nav %}
-
                     <nav class="sg-section-nav sg-jump-top structure">
-                        <h3 id="jump-top">Jump to a section:</h3>
+                        <h3>Jump to a section:</h3>
                         <h4><a href="#components-section">Components</a></h4>
                         <ul>
                             {% block nav-item-colors %}
@@ -89,6 +88,7 @@
                             </ul>
                         </nav>
                     {% endblock additional-sections %}
+
                 {% endblock section-nav %}
             </section>
 
@@ -231,8 +231,6 @@
                     <h2 class="sg-main-section-title">UX Elements</h2>
                     {% block uxinner %}
 
-                        {{ people }}
-
                         {% block transitions %}
                             <section class="sg-section transitions-section" id="transitions-example">
                                 <header class="sg-section-header">
@@ -269,6 +267,8 @@
                     {% endblock uxinner %}
                 </section>
             {% endblock ux-block %}
+
+
             <button class="back-to-top">Back to Top</button>
         </main>
 

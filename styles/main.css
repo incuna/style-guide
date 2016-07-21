@@ -1185,8 +1185,7 @@ td, th {
   font-weight: 300; }
 
 .sg-main-content {
-  padding-top: 40px;
-  position: relative; }
+  padding-top: 40px; }
 
 .sg-intro {
   padding-bottom: 40px;
@@ -1224,8 +1223,5 @@ td, th {
   position: fixed;
   bottom: 20px;
   right: 0; }
-
-.open {
-  background: red; }
 
 /*# sourceMappingURL=main.css.map */
