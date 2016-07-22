@@ -14,26 +14,27 @@
 
     // Throttle function from https://remysharp.com/2010/07/21/throttling-function-calls
     var throttle = function (fn, threshhold, scope) {
-        threshhold || (threshhold = 250);
-        var last;
-        var deferTimer;
-        return function () {
-            var context = scope || this;
-            var now = +new Date;
-            var args = arguments;
-            if (last && now < last + threshhold) {
-                // hold on to it
-                clearTimeout(deferTimer);
-                deferTimer = setTimeout(function () {
+        if (threshhold || (threshhold = 250)) {
+            var last;
+            var deferTimer;
+            return function () {
+                var context = scope || this;
+                var now = Number(new Date());
+                var args = arguments;
+                if (last && now < last + threshhold) {
+                    // hold on to it
+                    clearTimeout(deferTimer);
+                    deferTimer = setTimeout(function () {
+                        last = now;
+                        fn.apply(context, args);
+                    },
+                    threshhold + last - now);
+                } else {
                     last = now;
                     fn.apply(context, args);
-                },
-                threshhold + last - now);
-            } else {
-                last = now;
-                fn.apply(context, args);
-            }
-        };
+                }
+            };
+        }
     };
 
     var setUpTopButton = function () {

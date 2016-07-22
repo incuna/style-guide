@@ -114,7 +114,16 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('lint', 'Run the JS linters.', [
+        'jshint',
         'jscs'
+    ]);
+
+    grunt.registerTask('test', 'Run the tests.', function (env) {
+         'lint'
+    });
+
+    grunt.registerTask('travis', 'Run the tests in Travis', [
+        'test:travis'
     ]);
 
 }
