@@ -22,7 +22,9 @@
     "grunt-version": "0.3.3",
     "jit-grunt": "0.9.1",
     "load-grunt-tasks": "0.2.0",
-    "node-bourbon": "4.2.3"
+    "node-bourbon": "4.2.3",
+    "grunt-jscs": "2.8.0",
+    "grunt-contrib-jshint": "1.0.0"
   },
   "scripts": {
     "test": "grunt build"

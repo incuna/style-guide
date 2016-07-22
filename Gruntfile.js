@@ -77,6 +77,23 @@ module.exports = function (grunt) {
                 src: ['index.html'],
                 dest: './'
             }
+        },
+
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            all: [
+                'scripts/*.js'
+            ]
+        },
+
+        jscs: {
+            options: {
+                config: '.jscsrc',
+                fix: true
+            },
+            src: 'scripts/*.js'
         }
 
     });
@@ -94,6 +111,10 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'swig',
         'sass'
+    ]);
+
+    grunt.registerTask('lint', 'Run the JS linters.', [
+        'jscs'
     ]);
 
 }

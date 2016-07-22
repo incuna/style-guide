@@ -1185,7 +1185,8 @@ td, th {
   font-weight: 300; }
 
 .sg-main-content {
-  padding-top: 40px; }
+  padding-top: 40px;
+  position: relative; }
 
 .sg-intro {
   padding-bottom: 40px;

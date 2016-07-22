@@ -1,6 +1,6 @@
-(function ($, _) {
+(function ($) {
     'use strict';
-
+    // using '.class-name' instead of $('.class-name') so the variables can be used in the .on() event handlers
     var topButton = '.back-to-top';
     var scrollableAreaTop = '.sg-jump-top';
     var scrollableLinks = '.sg-section-nav a';
@@ -13,30 +13,28 @@
     var throttleInterval = 100;
 
     // Throttle function from https://remysharp.com/2010/07/21/throttling-function-calls
-    function throttle(fn, threshhold, scope) {
-      threshhold || (threshhold = 250);
-      var last;
-      var deferTimer;
-      return function () {
-        var context = scope || this;
-
-        var now = +new Date;
-        var args = arguments;
-        if (last && now < last + threshhold) {
-            // hold on to it
-            clearTimeout(deferTimer);
-
-            deferTimer = setTimeout(function () {
-                last = now;
-                fn.apply(context, args); 
-            }, 
-            threshhold + last - now);
-        } else {
+    var throttle = function (fn, threshhold, scope) {
+        threshhold || (threshhold = 250);
+        var last;
+        var deferTimer;
+        return function () {
+            var context = scope || this;
+            var now = +new Date;
+            var args = arguments;
+            if (last && now < last + threshhold) {
+                // hold on to it
+                clearTimeout(deferTimer);
+                deferTimer = setTimeout(function () {
+                    last = now;
+                    fn.apply(context, args);
+                },
+                threshhold + last - now);
+            } else {
                 last = now;
                 fn.apply(context, args);
             }
         };
-    }
+    };
 
     var setUpTopButton = function () {
         windowTop = $(window).scrollTop();
@@ -44,12 +42,11 @@
         footerPosition = $(document).height() - $('.sg-footer').height();
         buttonPosition = 'absolute';
 
-        if (windowTop < showTopButtonDistance)
-        {
+        if (windowTop < showTopButtonDistance) {
             $(topButton).hide();
         } else {
             if (windowPosition < footerPosition) {
-                buttonPosition = 'fixed'; }
+            buttonPosition = 'fixed'; }
             $(topButton).css('position', buttonPosition).fadeIn('medium');
         }
     };
@@ -63,10 +60,10 @@
 
     $(document).ready(function () {
 
-        if (!$('body').hasClass('style-guide-page'))
-        {
+        if (!$('body').hasClass('style-guide-page')) {
             return;
         }
+
         scrollableAreaTopOffset = $(scrollableAreaTop).offset().top;
         showTopButtonDistance = scrollableAreaTopOffset + $(topButton).height();
 
@@ -87,4 +84,4 @@
             setUpTopButton();
         }, throttleInterval));
     });
-}(window.jQuery, window._));
+}(window.jQuery));
