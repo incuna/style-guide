@@ -122,4 +122,8 @@ module.exports = function (grunt) {
          'lint'
     });
 
+    grunt.registerTask('travis', 'Run the tests in Travis', [
+        'test:travis'
+    ]);
+
 }
