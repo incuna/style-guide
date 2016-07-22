@@ -27,8 +27,7 @@
                     deferTimer = setTimeout(function () {
                         last = now;
                         fn.apply(context, args);
-                    },
-                    threshhold + last - now);
+                    }, threshhold + last - now);
                 } else {
                     last = now;
                     fn.apply(context, args);
