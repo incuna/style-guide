@@ -51,7 +51,6 @@
             if (windowPosition < footerPosition) {
                 buttonPosition = 'fixed'; }
             $(topButton).css('position', buttonPosition).fadeIn('medium');
-            console.log('show button');
         }
     };
 
@@ -63,6 +62,11 @@
     };
 
     $(document).ready(function () {
+
+        if (!$('body').hasClass('style-guide-page'))
+        {
+            return;
+        }
         scrollableAreaTopOffset = $(scrollableAreaTop).offset().top;
         showTopButtonDistance = scrollableAreaTopOffset + $(topButton).height();
 
