@@ -1,9 +1,17 @@
+// JS to add animated page scrolling to links and 'back to top' button behaviour
+// ------------------------------------------------------------------------------------------------------------
+// To set up the scrollable area in your HTML file:
+// - choose the element to scoll back up to by giving it a class of 'jump-top'
+// - choose the element containing your (scrollable) navigation links by giving it a class of 'scrollable-links'
+// - add a button with a class of 'back-to-top' at the bottom of the scrollable area. It will float at the 
+//   bottom of the screen or scrollable page area as needed (and hide if the user scrolls above 'jump-top')
+
 (function ($) {
     'use strict';
     // using '.class-name' instead of $('.class-name') so the variables can be used in the .on() event handlers
     var topButton = '.back-to-top';
-    var scrollableAreaTop = '.sg-jump-top';
-    var scrollableLinks = '.sg-section-nav a';
+    var scrollableAreaTop = '.jump-top';
+    var scrollableLinks = '.scrollable-links a';
     var windowPosition;
     var footerPosition;
     var buttonPosition;
@@ -13,27 +21,29 @@
     var throttleInterval = 100;
 
     // Throttle function from https://remysharp.com/2010/07/21/throttling-function-calls
-    var throttle = function (fn, threshhold, scope) {
-        if (threshhold || (threshhold = 250)) {
-            var last;
-            var deferTimer;
-            return function () {
-                var context = scope || this;
-                var now = Number(new Date());
-                var args = arguments;
-                if (last && now < last + threshhold) {
-                    // hold on to it
-                    clearTimeout(deferTimer);
-                    deferTimer = setTimeout(function () {
-                        last = now;
-                        fn.apply(context, args);
-                    }, threshhold + last - now);
-                } else {
+    var throttle = function (fn, threshold, scope) {
+        if (!threshold) {
+            threshold = 250
+        }
+
+        var last;
+        var deferTimer;
+        return function () {
+            var context = scope || this;
+            var now = Number(new Date());
+            var args = arguments;
+            if (last && now < last + threshold) {
+                // hold on to it
+                clearTimeout(deferTimer);
+                deferTimer = setTimeout(function () {
                     last = now;
                     fn.apply(context, args);
-                }
-            };
-        }
+                }, threshold + last - now);
+            } else {
+                last = now;
+                fn.apply(context, args);
+            }
+        };
     };
 
     var setUpTopButton = function () {
