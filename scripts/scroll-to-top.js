@@ -3,7 +3,7 @@
 // To set up the scrollable area in your HTML file:
 // - choose the element to scoll back up to by giving it a class of 'jump-top'
 // - choose the element containing your (scrollable) navigation links by giving it a class of 'scrollable-links'
-// - add a button with a class of 'back-to-top' at the bottom of the scrollable area. It will float at the 
+// - add a button with a class of 'back-to-top' just below the scrollable area. It will float at the 
 //   bottom of the screen or scrollable page area as needed (and hide if the user scrolls above 'jump-top')
 
 (function ($) {
