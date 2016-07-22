@@ -1048,17 +1048,6 @@ table {
 td, th {
   padding: 0; }
 
-body {
-  line-height: 1.4; }
-  body * {
-    box-sizing: border-box; }
-
-button {
-  border: 0;
-  background: none;
-  padding: 0;
-  margin: 0; }
-
 .style-guide-page .color {
   display: inline-block;
   margin: 10px;
@@ -1196,7 +1185,8 @@ button {
   font-weight: 300; }
 
 .sg-main-content {
-  padding-top: 40px; }
+  padding-top: 40px;
+  position: relative; }
 
 .sg-intro {
   padding-bottom: 40px;
@@ -1229,5 +1219,10 @@ button {
   border-bottom: 3px solid #d8d8d8; }
   .sg-main-section:last-of-type {
     border: 0; }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 0; }
 
 /*# sourceMappingURL=main.css.map */

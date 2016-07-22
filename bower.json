@@ -9,6 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "bourbon": "*",
+    "jquery": "2.2.1",
     "incuna-sass": "5.5.1"
   },
   "devDependencies": {
