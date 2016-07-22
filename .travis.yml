@@ -6,5 +6,4 @@ notifications:
 before_script: 
     bower install
 script:
-    - grunt travis
     - grunt test
