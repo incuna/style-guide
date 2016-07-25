@@ -1048,6 +1048,17 @@ table {
 td, th {
   padding: 0; }
 
+body {
+  line-height: 1.4; }
+  body * {
+    box-sizing: border-box; }
+
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0; }
+
 .style-guide-page .color {
   display: inline-block;
   margin: 10px;
