@@ -1,0 +1,35 @@
+{% block buttons-content %}
+
+    <h3 class="sg-section-sub-title">Button usage</h3>
+
+    {% block buttons-intro %}
+        <p>A paragraph of text you can use to explain how your button styles work</p>
+    {% endblock buttons-intro %}
+
+    {% block button-examples %}
+        <h3 class="sg-section-sub-title">Button Exmaples</h3>
+
+        {% block button-basic %}
+            <button>Basic button</button>
+            <a class="button">Basic button anchor</a>
+        {% endblock button-basic %}
+
+        {% block button-basic-icon %}
+            <button class="button-icon">Basic with icon</button>
+        {% endblock button-basic-icon %}
+
+        {% block button-alt %}
+            <button class="button-alt">Alt button</button>
+        {% endblock button-alt %}
+
+        {% block button-alt-icon %}
+            <button class="button-alt button-icon">Alt button</button>
+        {% endblock button-alt-icon %}
+
+        {% block button-round %}
+            <button class="button-round">Round button</button>
+        {% endblock button-round %}
+
+    {% endblock button-examples %}
+
+{% endblock buttons-content %}

@@ -1,0 +1,101 @@
+{% block tables-content %}
+
+    {% block table-elements %}
+        <h3 class="sg-section-sub-title">Table Elements</h3>
+
+        <table>
+            {% block thead %}
+                <thead>
+                    <tr>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                    </tr>
+                </thead>
+            {% endblock thead %}
+            {% block tbody %}
+                <tbody>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                </tbody>
+            {% block tbody %}
+            {% block tfoot %}{% endblock tfoot %}
+        </table>
+
+    {% endblock table-elements %}
+
+    {% block table-classes %}
+        <h3 class="sg-section-sub-title">Table Classes</h3>
+
+        <div class="table">
+            {% block thead %}
+                <div class="thead">
+                    <div class="tr">
+                        <div class="th">Table heading</div>
+                        <div class="th">Table heading</div>
+                        <div class="th">Table heading</div>
+                        <div class="th">Table heading</div>
+                        <div class="th">Table heading</div>
+                        <div class="th">Table heading</div>
+                    </div>
+                </div>
+            {% endblock thead %}
+            {% block tbody %}
+                <tbody>
+                    <div class="tr">
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                        <div class="td">Table cell</div>
+                    </div>
+                </tbody>
+            {% block tbody %}
+            {% block tfoot %}{% endblock tfoot %}
+        </div>
+
+    {% endblock table-classes %}
+
+{% endblock tables-content %}
