@@ -19,13 +19,17 @@
     "grunt-contrib-cssmin": "0.7.0",
     "grunt-contrib-watch": "0.5.3",
     "grunt-sass": "1.1.0",
-    "grunt-swig-templates": "0.1.4",
     "grunt-version": "0.3.3",
     "jit-grunt": "0.9.1",
     "load-grunt-tasks": "0.2.0",
-    "node-bourbon": "4.2.3",
     "grunt-jscs": "2.8.0",
     "grunt-contrib-jshint": "1.0.0"
+  },
+  "dependencies": {
+    "grunt-swig-templates": "0.1.4",
+    "node-bourbon": "4.2.3",
+    "incuna-sass": "github:incuna/incuna-sass#6.1.0",
+    "incuna-transitions": "github:incuna/incuna-transitions#1.6.0"
   },
   "scripts": {
     "test": "grunt build"
