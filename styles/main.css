@@ -447,7 +447,6 @@
     left: 0;
     opacity: 1; } }
 
-/* ICON TRANSITIONS */
 @-webkit-keyframes hover-icon-down {
   0%,
   50%,
@@ -598,6 +597,16 @@
     transform: scale(1.5); } }
 
 @keyframes hover-icon-pop {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); } }
+
+@-webkit-keyframes hover-icon-bounce-out {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); } }
+
+@keyframes hover-icon-bounce-out {
   50% {
     -webkit-transform: scale(1.5);
     transform: scale(1.5); } }
@@ -1047,6 +1056,24 @@ table {
 
 td, th {
   padding: 0; }
+
+body {
+  line-height: 1.4; }
+  body * {
+    box-sizing: border-box; }
+
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0; }
+
+.inline-svg-map {
+  display: none; }
+
+.inline-svg-map svg *,
+.inline-svg * {
+  fill: inherit; }
 
 .style-guide-page .color {
   display: inline-block;
