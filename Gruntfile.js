@@ -44,7 +44,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 files: {
-                    'styles/main.css': 'sass/main.sass'
+                    'styles/style-guide.css': 'sass/style-guide.sass'
                 }
             }
         },
