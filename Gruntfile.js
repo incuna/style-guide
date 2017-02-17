@@ -74,7 +74,7 @@ module.exports = function (grunt) {
             dev: {
                 expand: true,
                 cwd: 'templates',
-                src: ['index.html'],
+                src: ['style-guide-base.html'],
                 dest: './'
             }
         },
