@@ -2,7 +2,7 @@
   "name": "style-guide",
   "version": "0.0.0",
   "author": "Incuna",
-  "main": "node/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/incuna/style-guide"

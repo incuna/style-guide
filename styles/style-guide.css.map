@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "main.css",
+	"file": "style-guide.css",
 	"sources": [
-		"../sass/main.sass",
+		"../sass/style-guide.sass",
 		"../sass/_imports.sass",
 		"../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss",
 		"../node_modules/bourbon/app/assets/stylesheets/settings/_prefixer.scss",
