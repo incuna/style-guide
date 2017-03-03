@@ -1,6 +1,6 @@
-{% block forms-content %}
+{% block forms_content %}
 
-    {% block forms-example %}
+    {% block forms_example %}
         <h3 class="section-sub-title">Example Form</h3>
 
         <form action="" method="post">
@@ -8,7 +8,7 @@
                 <p class="error">This is an example form error</p>
             </div>
 
-            {% block text-fields %}
+            {% block text_fields %}
                 <fieldset class="text-fieldset">
                     <div class="control-group text required">
                         <label for="field-name" class="control-label">
@@ -63,18 +63,18 @@
                         </div>
                     </div>
                 </fieldset>
-            {% endblock text-fields %}
+            {% endblock %}
 
-            {% block textarea-fields %}
+            {% block textarea_fields %}
                 <fieldset class="textarea-fieldset">
                     <div class="control-group textarea">
                         <label class="textarea-label">Textarea</label>
                         <textarea class="textarea-input" name="textarea" placeholder="Text area"></textarea>
                     </div>
                 </fieldset>
-            {% endblock textarea-fields %}
+            {% endblock %}
 
-            {% block radio-fields %}
+            {% block radio_fields %}
                 <fieldset class="radio-fieldset">
                     <div class="control-group radio required">
                         <label class="control-label">
@@ -97,9 +97,9 @@
                         </div>
                     </div>
                 </fieldset>
-            {% endblock radio-fields %}
+            {% endblock %}
 
-            {% block checkbox-fields %}
+            {% block checkbox_fields %}
                 <fieldset class="checkbox-fieldset">
                     <div class="control-group checkbox">
                         <div class="controls">
@@ -127,9 +127,9 @@
                         </div>
                     </div>
                 </fieldset>
-            {% endblock checkbox-fields %}
+            {% endblock %}
 
-            {% block select-fields %}
+            {% block select_fields %}
                 <fieldset class="select-fieldset">
                     <div class="control-group select">
                         <label class="select-label">Select field</label>
@@ -140,35 +140,35 @@
                         </select>
                     </div>
                 </fieldset>
-            {% endblock select-fields %}
+            {% endblock %}
 
-            {% block file-fields %}
+            {% block file_fields %}
                 <fieldset class="file-fieldset">
                     <div class="control-group file">
                         <label class="file-label">File input</label>
                         <input class="file-input" type="file" name="file">
                     </div>
                 </fieldset>
-            {% endblock file-fields %}
+            {% endblock %}
 
-            {% block forms-extra %}{% endblock forms-extra %}
+            {% block forms_extra %}{% endblock %}
 
-            {% block form-actions %}
+            {% block forms_actions %}
                 <div class="form-actions">
                     <!-- MUST be a button not an input -->
                     <button type="submit" class="submit-button">Submit</button>
                 </div>
-            {% endblock form-actions %}
+            {% endblock %}
         </form>
-    {% endblock forms-example %}
+    {% endblock %}
 
-    {% block form-errors %}
+    {% block form_errors %}
         <h3 class="section-sub-title">Form Errors</h3>
 
-        {% block form-errors-intro %}
+        {% block form_errors_intro %}
             <p>Form errors are displayed in various ways as demonstrated below</p>
-        {% endblock form-errors-intro %}
+        {% endblock %}
 
-    {% endblock form-errors %}
+    {% endblock %}
 
-{% endblock forms-content %}
+{% endblock %}

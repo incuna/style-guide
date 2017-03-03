@@ -1,22 +1,25 @@
-{% block icons-content %}
+{% block icons_content %}
 
     <h3 class="sg-section-sub-title">Icon usage</h3>
 
-    {% block icons-intro %}
-        <p>When using a colour in a sass file, please try to use a descriptive variable name not the colour name itself. This will allow for easy reskinning in future.</p>
-    {% endblock icons-intro %}
+    {% block icons_intro %}
+        <p>Add icon files to the icon directory, grunt will compile the file names into json and use that to add them to the style guide</p>
+    {% endblock %}
 
-    {% block main-icons %}
+    {% block main_icons %}
         <h3 class="sg-section-sub-title">Available icons</h3>
 
-        {% for icon in icons %}
-            <div class="icon {{ loop.key }}">
-                <span class="icon-name">{{ loop.key }}</span>
-                <svg class="inline-svg svg-{{ loop.key }}">
-                    <use xlink:href="#svg-{{ loop.key }}"></use>
-                </svg>
-            </div><!-- icon -->
-        {% endfor %}
-    {% endblock main-icons %}
+        <div class="sg-icon-wrapper">
 
-{% endblock icons-content %}
+            {% for icon, name in icons %}
+                <div class="icon {{ icon }}">
+                    <svg class="inline-svg svg-{{ icon }}">
+                        <use xlink:href="#svg-{{ icon }}"></use>
+                    </svg>
+                    <span class="icon-name">{{ icon }}</span>
+                </div><!-- icon -->
+            {% endfor %}
+        </div>
+    {% endblock %}
+
+{% endblock %}

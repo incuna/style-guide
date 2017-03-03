@@ -1,22 +1,22 @@
-{% block colors-content %}
+{% block colors_content %}
 
     <h3 class="sg-section-sub-title">Color usage</h3>
 
-    {% block colors-intro %}
+    {% block colors_intro %}
         <p>When using a colour in a sass file, please try to use a descriptive variable name not the colour name itself. This will allow for easy reskinning in future.</p>
-    {% endblock colors-intro %}
+    {% endblock %}
 
-    {% block main-colors %}
+    {% block main_colors %}
         <h3 class="sg-section-sub-title">Main colors</h3>
 
-        {% for color in colors %}
-            <div class="color {{ loop.key }}">
-                <p class="color-name">{{ loop.key }}</p>
-                <div class="color-block"></div>
-                <p class="hexcode">{{ color }}</p>
+        {% for color, hex in colors %}
+            <div class="color {{ color }}">
+                <p class="color-name">{{ color }}</p>
+                <div class="color-block sg-color-block"></div>
+                <p class="hexcode">{{ hex }}</p>
             </div><!-- color -->
         {% endfor %}
-    {% endblock main-colors %}
+    {% endblock %}
 
     {% block greys %}
         <h3 class="sg-section-sub-title">Greys</h3>
@@ -86,6 +86,6 @@
             <div class="color-block"></div>
             <p class="hexcode">Darken 40%</p>
         </div><!-- color -->
-    {% endblock greys %}
+    {% endblock %}
 
-{% endblock colors-content %}
+{% endblock %}
