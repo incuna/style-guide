@@ -1,9 +1,9 @@
-{% block tables-content %}
+{% block tables_content %}
 
-    {% block table-elements %}
+    {% block table_elements %}
         <h3 class="sg-section-sub-title">Table Elements</h3>
 
-        <table>
+        <table class="sg-table content-table">
             {% block thead %}
                 <thead>
                     <tr>
@@ -15,7 +15,7 @@
                         <th>Table heading</th>
                     </tr>
                 </thead>
-            {% endblock thead %}
+            {% endblock %}
             {% block tbody %}
                 <tbody>
                     <tr>
@@ -51,17 +51,17 @@
                         <td>Table cell</td>
                     </tr>
                 </tbody>
-            {% block tbody %}
-            {% block tfoot %}{% endblock tfoot %}
+            {% endblock %}
+            {% block tfoot %}{% endblock %}
         </table>
 
-    {% endblock table-elements %}
+    {% endblock %}
 
-    {% block table-classes %}
+    {% block table_classes %}
         <h3 class="sg-section-sub-title">Table Classes</h3>
 
         <div class="table">
-            {% block thead %}
+            {% block thead_class %}
                 <div class="thead">
                     <div class="tr">
                         <div class="th">Table heading</div>
@@ -72,9 +72,9 @@
                         <div class="th">Table heading</div>
                     </div>
                 </div>
-            {% endblock thead %}
-            {% block tbody %}
-                <tbody>
+            {% endblock %}
+            {% block tbody_class %}
+                <div class="tbody">
                     <div class="tr">
                         <div class="td">Table cell</div>
                         <div class="td">Table cell</div>
@@ -91,11 +91,11 @@
                         <div class="td">Table cell</div>
                         <div class="td">Table cell</div>
                     </div>
-                </tbody>
-            {% block tbody %}
-            {% block tfoot %}{% endblock tfoot %}
+                </div>
+            {% endblock %}
+            {% block tfoot_class %}{% endblock %}
         </div>
 
-    {% endblock table-classes %}
+    {% endblock %}
 
-{% endblock tables-content %}
+{% endblock %}

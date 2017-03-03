@@ -1,65 +1,65 @@
-{% block widgets-content %}
+{% block widgets_content %}
 
-    {% block widget-basic %}
-        <article class="widget standard-widget {% block basic-widget-class %}{% endblock basic-widget-class %}">
+    {% block widget_basic %}
+        <article class="widget standard-widget {% block basic_widget_class %}{% endblock %}">
             <header class="widget-header">
                 <div class="widget-header-inner">
-                    {% block basic-widget-header %}
+                    {% block basic_widget_header %}
                         <h1 class="widget-title">
                             <span class="widget-title-inner">Basic widget example</span>
                         </h1>
-                    {% endblock basic-widget-header %}
+                    {% endblock %}
                 </div>
             </header>
 
             <section class="widget-body">
                 <div class="widget-body-inner">
-                    {% block basic-widget-body %}
+                    {% block basic_widget_body %}
                         Widget body content
-                    {% endblock basic-widget-body %}
+                    {% endblock %}
                 </div>
             </section>
 
             <footer class="widget-footer">
                 <div class="widget-footer-inner">
-                    {% block basic-widget-footer %}
+                    {% block basic_widget_footer %}
                         Widget footer content
-                    {% endblock basic-widget-footer %}
+                    {% endblock %}
                 </div>
             </footer>
         </article>
-    {% endblock widget-basic %}
+    {% endblock %}
 
-    {% block widget-featured %}
-        <article class="widget standard-widget {% block featured-widget-class %}{% endblock featured-widget-class %}">
+    {% block widget_featured %}
+        <article class="widget standard-widget {% block featured_widget_class %}{% endblock %}">
             <header class="widget-header">
                 <div class="widget-header-inner">
-                    {% block featured-widget-header %}
+                    {% block featured_widget_header %}
                         <h1 class="widget-title">
                             <span class="widget-title-inner">Featured widget example</span>
                         </h1>
-                    {% endblock featured-widget-header %}
+                    {% endblock %}
                 </div>
             </header>
 
             <section class="widget-body">
                 <div class="widget-body-inner">
-                    {% block featured-widget-body %}
+                    {% block featured_widget_body %}
                         Widget body content
-                    {% endblock featured-widget-body %}
+                    {% endblock %}
                 </div>
             </section>
 
             <footer class="widget-footer">
                 <div class="widget-footer-inner">
-                    {% block featured-widget-footer %}
+                    {% block featured_widget_footer %}
                         Widget footer content
-                    {% endblock featured-widget-footer %}
+                    {% endblock %}
                 </div>
             </footer>
         </article>
-    {% endblock widget-featured %}
+    {% endblock %}
 
-    {% block widgets-extra %}{% endblock widgets-extra %}
+    {% block widgets_extra %}{% endblock %}
 
-{% endblock widgets-content %}
+{% endblock %}

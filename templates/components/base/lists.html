@@ -1,40 +1,42 @@
-{% block lists-content %}
+{% block lists_content %}
 
-    {% block unordered-lists %}
-        <h3 class="sg-section-sub-title">Unordered Lists</h3>
+    <div class="feincms-content">
+        {% block unordered_lists %}
+            <h3 class="sg-section-sub-title">Unordered Lists</h3>
 
-        <ul>
-            <li>List item example</li>
-            <li>List item example</li>
-            <li>A list within a list
-                <ul>
-                    <li>Nested list item example</li>
-                    <li>Nested list item example</li>
-                    <li>Nested list item example</li>
-                </ul>
-            </li>
-            <li>List item example</li>
-        </ul>
+            <ul class="sg-ul">
+                <li>List item example</li>
+                <li>List item example</li>
+                <li>A list within a list
+                    <ul>
+                        <li>Nested list item example</li>
+                        <li>Nested list item example</li>
+                        <li>Nested list item example</li>
+                    </ul>
+                </li>
+                <li>List item example</li>
+            </ul>
 
-    {% endblock unordered-lists %}
+        {% endblock %}
 
-    {% block ordered-lists %}
-        <h3 class="sg-section-sub-title">Ordered Lists</h3>
+        {% block ordered_lists %}
+            <h3 class="sg-section-sub-title">Ordered Lists</h3>
 
-        <ol>
-            <li>List item example</li>
-            <li>List item example</li>
-            <li>A list within a list
-                <ol>
-                    <li>Nested list item example</li>
-                    <li>Nested list item example</li>
-                    <li>Nested list item example</li>
-                </ol>
-            </li>
-            <li>List item example</li>
-        </ol>
-    {% endblock ordered-lists %}
+            <ol class="sg-ol">
+                <li>List item example</li>
+                <li>List item example</li>
+                <li>A list within a list
+                    <ol>
+                        <li>Nested list item example</li>
+                        <li>Nested list item example</li>
+                        <li>Nested list item example</li>
+                    </ol>
+                </li>
+                <li>List item example</li>
+            </ol>
+        {% endblock %}
 
-    {% block lists-extra %}{% endblock lists-extra %}
+        {% block lists_extra %}{% endblock %}
+    </div>
 
-{% endblock lists-content %}
+{% endblock %}

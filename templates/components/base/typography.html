@@ -1,47 +1,53 @@
-{% block typography-content %}
+{% block typography_content %}
 
-    {% block fonts-section %}
+    {% block fonts_section %}
         <h3 class="sg-section-sub-title">Fonts</h3>
         <p>The following fonts are available for use on this project</p>
-        {% block font-main %}
+        {% block font_main %}
             <p>
-                <span>{% block font-main-name %}Font main{% endblock font-main-name %}</span>
-                <span>{% block font-main-variable %}$font-main{% endblock font-main-variable %}</span>
+                <span>{% block font_main_name %}Font regular{% endblock %}</span>
+                <span>{% block font_main_variable %}$font-regular{% endblock %}</span>
             </p>
-        {% endblock font-main %}
+        {% endblock %}
 
-        {% block font-bold %}
+        {% block font_bold %}
             <p>
-                <span>{% block font-bold-name %}Font bold{% endblock font-bold-name %}</span>
-                <span>{% block font-bold-variable %}$font-bold{% endblock font-bold-variable %}</span>
+                <b>
+                    <span>{% block font_bold_name %}Font bold{% endblock %}</span>
+                    <span>{% block font_bold_variable %}$font-bold{% endblock %}</span>
+                </b>
             </p>
-        {% endblock font-bold %}
+        {% endblock %}
 
-        {% block font-italic %}
+        {% block font_italic %}
             <p>
-                <span>{% block font-italic-name %}Font italic{% endblock font-italic-name %}</span>
-                <span>{% block font-italic-variable %}$font-italic{% endblock font-italic-variable %}</span>
+                <em>
+                    <span>{% block font_italic_name %}Font italic{% endblock %}</span>
+                    <span>{% block font_italic_variable %}$font-italic{% endblock %}</span>
+                </em>
             </p>
-        {% endblock font-italic %}
+        {% endblock %}
 
-        {% block font-bold-italic %}
+        {% block font_bold_italic %}
             <p>
-                <span>{% block font-bold-italic-name %}Font bold-italic{% endblock font-bold-italic-name %}</span>
-                <span>{% block font-bold-italic-variable %}$font-bold-italic{% endblock font-bold-italic-variable %}</span>
+                <b><em>
+                    <span>{% block font_bold_italic_name %}Font bold-italic{% endblock %}</span>
+                    <span>{% block font_bold_italic_variable %}$font-bold-italic{% endblock %}</span>
+                </em></b>
             </p>
-        {% endblock font-bold-italic %}
+        {% endblock %}
 
-        {% block font-alt %}
-            <p>
-                <span>{% block font-alt-name %}Font alt{% endblock font-alt-name %}</span>
-                <span>{% block font-alt-variable %}$font-alt{% endblock font-alt-variable %}</span>
+        {% block font_alt_%}
+            <p class="sg-font-alt">
+                <span>{% block font_alt_name %}Font alt{% endblock %}</span>
+                <span>{% block font_alt_variable %}$font-alt{% endblock %}</span>
             </p>
-        {% endblock font-alt %}
+        {% endblock %}
 
-        {% block font-extra %}{% endblock font-extra %}
-    {% endblock fonts-section %}
+        {% block font_extra %}{% endblock %}
+    {% endblock %}
 
-    {% block font-use-section %}
+    {% block font_use_section %}
         <h3 class="sg-section-sub-title">Font usage</h3>
 
         <h1>Heading 1 Example</h1>
@@ -57,28 +63,28 @@
         <p><em>This is some text in an em tag</em> and <i>here this is an i tag</i></p>
         <p><em><strong>This text is both bold and italic</strong></em></p>
 
-        {% block font-use-extra %}{% endblock font-use-extra %}
+        {% block font_use_extra %}{% endblock %}
 
-    {% endblock font-use-section %}
+    {% endblock %}
 
-    {% block links-section %}
+    {% block links_section %}
         <h3 class="sg-section-sub-title">Links</h3>
 
-        {% block inline-link %}
+        {% block inline_link %}
             <p>Make meme, make cute face spread kitty litter all over house but all of a sudden cat goes crazy scratch leg <a href="">This is an inline text link</a> knock dish off table head butt</p>
-        {% endblock inline-link %}
+        {% endblock %}
 
-        {% block alt-link %}
+        {% block alt_link %}
             <a href="">
                 <span>This is an alt link</span>
-                {% block alt-link-icon %}{% endblock alt-link-icon %}
+                {% block alt_link_icon %}{% endblock %}
             </a>
-        {% endblock alt-link %}
+        {% endblock %}
 
-        {% block links-extra %}{% endblock links-extra %}
+        {% block links_extra %}{% endblock %}
 
-    {% endblock links-section %}
+    {% endblock %}
 
-    {% block typography-extra %}{% endblock typography-extra %}
+    {% block typography_extra %}{% endblock %}
 
-{% endblock typography-content %}
+{% endblock %}

@@ -1,10 +1,10 @@
-{% block ui-content %}
+{% block ui_content %}
 
-    {% block ui-intro %}
+    {% block ui_intro %}
         <p>A paragraph you can use to talk about interactive elements on your site.</p>
-    {% endblock ui-intro %}
+    {% endblock %}
 
-    {% block view-toggle %}
+    {% block view_toggle %}
         <h3 class="sg-section-sub-title">View toggle</h3>
 
         <div class="toggle-buttons">
@@ -15,7 +15,7 @@
                 <span translate>View two</span>
             </button>
         </div>
-    {% endblock view-toggle %}
+    {% endblock %}
 
     {% block switch %}
         <h3 class="sg-section-sub-title">Switch</h3>
@@ -26,8 +26,7 @@
                 <div class="option">Option two</div>
            </div>
         </div>
-    {% endblock switch %}
+    {% endblock %}
+    {% block ui_extra %}{% endblock %}
 
-    {% block ui-extra %}{% endblock ui-extra %}
-
-{% endblock ui-content %}
+{% endblock %}

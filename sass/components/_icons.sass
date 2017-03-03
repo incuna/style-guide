@@ -1,21 +1,27 @@
 .style-guide-page
+    .sg-icon-wrapper
+        @include display(flex)
+        @include flex-flow(row wrap)
+
     .icon
+        @include flex-grow(1)
         display: inline-block
         vertical-align: middle
-        padding: 8px
+        padding: 12px
         margin: 10px
         border:
             radius: 8px
         background: $grey-3
+        text-align: center
+        min-width: 80px
 
         .icon-name,
         .inline-svg
-            display: inline-block
-            vertical-align: middle
+            display: block
 
         .inline-svg
-            width: 15px
-            height: 15px
+            width: 45px
+            height: 45px
             fill: $grey-8
-            margin:
-                left: 10px
+            margin: auto
+                bottom: 10px
