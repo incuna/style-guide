@@ -1,28 +1,64 @@
 .sg-section-nav
-    width: 220px
+    top: 0
+    right: 0
+    left: 0
     position: fixed
-    top: 40px
-    right: 20px
     z-index: 10
 
+    @media all and (min-width: #{$section-nav-breakpoint})
+        width: $section-nav-width
+        top: $site-padding
+        right: $site-padding
+        left: auto
+
+.sg-section-nav,
+.sg-section-nav-wrapper,
+.sg-section-nav-list-wrapper
+    @include display(flex)
+
+    @media all and (min-width: #{$section-nav-breakpoint})
+        display: block
+
+.sg-section-nav-wrapper
+    @include justify-content(flex-start)
+    @include align-items(flex-start)
+    @include flex(1)
+    background: $grey-3
+
+.sg-section-nav-list-wrapper
+    @include align-self(stretch)
+    @include flex(1 0 33%)
+    max-width: 220px
+    position: relative
+
 .sg-section-nav-header
-    display: block
     margin: 0
-    padding: 12px
+    padding: 0.8em
     border: 1px solid $grey-3
     background: $grey-1
     text-align: center
+    // Hide on small screens
+    display: none
+
+    @media all and (min-width: 680px)
+        display: block
 
 .sg-section-nav-title
+    @include flex(1 0 100%)
     @include transition(background 0.2s ease)
-    background: $grey-3
     display: block
     margin: 0
-    padding: 14px
+    padding: 1em
+        right: 2em
     border:
-        bottom: 1px solid $grey-4
+        right: 1px solid $grey-4
+        left: 1px solid $grey-4
     cursor: pointer
     position: relative
+
+    @media all and (min-width: #{$section-nav-breakpoint})
+        border: 0
+            bottom: 1px solid $grey-4
 
     &::after
         @include transition(all 0.2s ease-out)
@@ -30,12 +66,14 @@
         content: '∇'
         transform:
             origin: center
-        font-size: 16px
+        font-size: 1em
         line-height: 1
         color: $grey-5
         position: absolute
-        right: 14px
-        top: 15px
+        right: 1em
+        top: 50%
+        margin:
+            top: -0.5em
 
     #{$hover-states},
     &.open
@@ -55,12 +93,19 @@
     padding: 0
     max-height: 0
     overflow: hidden
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+
+    @media all and (min-width: #{$section-nav-breakpoint})
+        position: static
 
     &.open
         max-height: 500px
 
     a
         display: block
-        padding: 14px
+        padding: 1em
         border: 1px solid $grey-2
         background: $white

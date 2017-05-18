@@ -20,58 +20,66 @@
             <div class="structure">
                 <nav class="sg-section-nav sticky-nav">
                     <h3 class="sg-section-nav-header">Jump to a section</h3>
-                    <h4 class="sg-section-nav-title js-toggle-header">Components</h4>
-                    <ul class="sg-section-nav-list js-toggle-body">
-                        {% block nav_item_colors %}
-                            <li><a href="#colors-example">Colors</a></li>
-                        {% endblock %}
-                        {% block nav_item_buttons %}
-                            <li><a href="#buttons-example">Buttons</a></li>
-                        {% endblock %}
-                        {% block nav_item_icons %}
-                            <li><a href="#icons-example">Icons</a></li>
-                        {% endblock %}
-                        {% block nav_item_typography %}
-                            <li><a href="#typography-example">Typography</a></li>
-                        {% endblock %}
-                        {% block nav_item_lists %}
-                            <li><a href="#lists-example">Lists</a></li>
-                        {% endblock %}
-                        {% block nav_item_tables %}
-                            <li><a href="#tables-example">Tables</a></li>
-                        {% endblock %}
-                        {% block nav_item_forms %}
-                            <li><a href="#forms-example">Form elements</a></li>
-                        {% endblock %}
-                        {% block nav_item_messages %}
-                            <li><a href="#messages-example">Messages</a></li>
-                        {% endblock %}
-                    </ul>
-                    {% block additional_sections %}
-                        <h4 class="sg-section-nav-title js-toggle-header">Page elements</h4>
-                        <ul class="sg-section-nav-list js-toggle-body">
-                            {% block nav_item_page_titles %}
-                                <li><a href="#page-titles-example">Page titles</a></li>
-                            {% endblock %}
-                            {% block nav_item_widgets %}
-                                <li><a href="#widgets-example">Widgets</a></li>
-                            {% endblock %}
-                            {% block nav_item_navigation %}
-                                <li><a href="#navigation-example">Navigation</a></li>
-                            {% endblock %}
-                        </ul>
-                        <h4 class="sg-section-nav-title js-toggle-header">UX elements</h4>
-                        <ul class="sg-section-nav-list js-toggle-body">
-                            {% block nav_item_transitions %}
-                                <li><a href="#transitions-example">Transitions</a></li>
-                            {% endblock %}
-                            {% block nav_item_expanding_collapsing %}
-                                <li><a href="#expanding-collapsing-example">Expanding collapsing</a></li>
-                            {% endblock %}
-                            {% block nav_item_ui_elements %}
-                                <li><a href="#ui-elements-example">UI elements</a></li>
-                            {% endblock %}
-                        </ul>
+                    <div class="sg-section-nav-wrapper">
+                        <div class="sg-section-nav-list-wrapper">
+                            <h4 class="sg-section-nav-title js-toggle-header">Components</h4>
+                            <ul class="sg-section-nav-list js-toggle-body">
+                                {% block nav_item_colors %}
+                                    <li><a href="#colors-example">Colors</a></li>
+                                {% endblock %}
+                                {% block nav_item_buttons %}
+                                    <li><a href="#buttons-example">Buttons</a></li>
+                                {% endblock %}
+                                {% block nav_item_icons %}
+                                    <li><a href="#icons-example">Icons</a></li>
+                                {% endblock %}
+                                {% block nav_item_typography %}
+                                    <li><a href="#typography-example">Typography</a></li>
+                                {% endblock %}
+                                {% block nav_item_lists %}
+                                    <li><a href="#lists-example">Lists</a></li>
+                                {% endblock %}
+                                {% block nav_item_tables %}
+                                    <li><a href="#tables-example">Tables</a></li>
+                                {% endblock %}
+                                {% block nav_item_forms %}
+                                    <li><a href="#forms-example">Form elements</a></li>
+                                {% endblock %}
+                                {% block nav_item_messages %}
+                                    <li><a href="#messages-example">Messages</a></li>
+                                {% endblock %}
+                            </ul>
+                        </div>
+                        {% block additional_sections %}
+                            <div class="sg-section-nav-list-wrapper">
+                                <h4 class="sg-section-nav-title js-toggle-header">Page elements</h4>
+                                <ul class="sg-section-nav-list js-toggle-body">
+                                    {% block nav_item_page_titles %}
+                                        <li><a href="#page-titles-example">Page titles</a></li>
+                                    {% endblock %}
+                                    {% block nav_item_widgets %}
+                                        <li><a href="#widgets-example">Widgets</a></li>
+                                    {% endblock %}
+                                    {% block nav_item_navigation %}
+                                        <li><a href="#navigation-example">Navigation</a></li>
+                                    {% endblock %}
+                                </ul>
+                            </div>
+                            <div class="sg-section-nav-list-wrapper">
+                                <h4 class="sg-section-nav-title js-toggle-header">UX elements</h4>
+                                <ul class="sg-section-nav-list js-toggle-body">
+                                    {% block nav_item_transitions %}
+                                        <li><a href="#transitions-example">Transitions</a></li>
+                                    {% endblock %}
+                                    {% block nav_item_expanding_collapsing %}
+                                        <li><a href="#expanding-collapsing-example">Expanding collapsing</a></li>
+                                    {% endblock %}
+                                    {% block nav_item_ui_elements %}
+                                        <li><a href="#ui-elements-example">UI elements</a></li>
+                                    {% endblock %}
+                                </ul>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             {% endblock %}
