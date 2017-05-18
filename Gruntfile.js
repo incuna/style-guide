@@ -43,12 +43,13 @@ module.exports = function (grunt) {
                     'json-to-sass-map',
                 ]
             },
-            icons: {
+            svgstore: {
                 files: [
-                    'icons/*.svg'
+                    'icons/**/*.svg'
                 ],
                 tasks: [
-                    'icons'
+                    'icons',
+                    'svgstore'
                 ]
             }
         },
@@ -105,6 +106,20 @@ module.exports = function (grunt) {
             all: {}
         },
 
+        svgstore: {
+            options: {
+                prefix: 'svg-', // This will prefix each ID
+                svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+                    viewBox: '0 0 100 100',
+                    xmlns: 'http://www.w3.org/2000/svg'
+                }
+            },
+            main: {
+                dest: 'templates/svgstore/svg-defs.svg',
+                src: ['icons/**/*.svg']
+            }
+        },
+
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
@@ -139,12 +154,14 @@ module.exports = function (grunt) {
 
         grunt.file.write(grunt.template.process('json/icons.json'), JSON.stringify(iconFilesObject));
     });
+
     // - - - T A S K S - - -
 
     grunt.registerTask('default', 'dev');
 
     grunt.registerTask('dev', [
         'icons',
+        'svgstore',
         'json-to-sass',
         'json-to-sass-map',
         'sass',
@@ -153,6 +170,10 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'icons',
+        'svgstore',
+        'json-to-sass',
+        'json-to-sass-map',
         'nunjucks',
         'sass'
     ]);
