@@ -8,7 +8,7 @@ module.exports = function (grunt) {
     } else {
         // Use jit-grunt to only load necessary tasks for each invocation of grunt.
         require('jit-grunt')(grunt, {
-            'swig': 'grunt-swig-templates'
+            'nunjucks': 'grunt-nunjucks-2-html'
         });
     }
 
@@ -22,15 +22,16 @@ module.exports = function (grunt) {
                     'sass'
                 ]
             },
-            swig: {
+            nunjucks: {
                 files: [
-                    'templates/**/*.html'
+                    'templates/**/*'
                 ],
                 tasks: [
-                    'swig'
+                    'nunjucks'
                 ]
             }
         },
+
         sass: {
             options: {
                 sourceMap: true,
@@ -49,7 +50,7 @@ module.exports = function (grunt) {
             }
         },
 
-        swig: {
+        nunjucks: {
             options: {
                 data: {
                     colors: {
@@ -72,10 +73,9 @@ module.exports = function (grunt) {
                 }
             },
             dev: {
-                expand: true,
-                cwd: 'templates',
-                src: ['style-guide-base.html'],
-                dest: './'
+                files: {
+                    'style-guide-base.html': 'templates/style-guide-base.html'
+                }
             }
         },
 
@@ -95,7 +95,6 @@ module.exports = function (grunt) {
             },
             src: 'scripts/*.js'
         }
-
     });
 
     // - - - T A S K S - - -
@@ -104,12 +103,12 @@ module.exports = function (grunt) {
 
     grunt.registerTask('dev', [
         'sass',
-        'swig',
+        'nunjucks',
         'watch'
     ]);
 
     grunt.registerTask('build', [
-        'swig',
+        'nunjucks',
         'sass'
     ]);
 
