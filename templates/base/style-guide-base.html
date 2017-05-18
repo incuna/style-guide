@@ -7,14 +7,9 @@
 
 <main class="sg-main-content">
 
-    <section class="sg-intro scrollable-links">
-        {% block intro_text %}
-            <p class="sg-intro-text structure jump-top">
-                <span>When styling a new section or element on </span>
-                <span class="sg-project-name">{% block project_name %}this project{% endblock %}, </span>
-                <span>please refer to the guide below. Stick to the colour palette when possible - if a colour doesn't exist here, check with the designer whether an existing colour can be used, or a new one needs to be added. Try to avoid unecessary repetition</span>
-            </p>
-        {% endblock %}
+    <section class="sg-intro scrollable-links jump-top">
+        {# You can add a intro paragraph here with class sg-intro-text #}
+        {% block intro_text %}{% endblock %}
 
         {% block section_nav %}
             <div class="structure">
@@ -79,11 +74,10 @@
                                     {% endblock %}
                                 </ul>
                             </div>
-                        </div>
-                    </nav>
-                </div>
-            {% endblock %}
-
+                        {% endblock %}
+                    </div>
+                </nav>
+            </div>
         {% endblock %}
     </section>
 

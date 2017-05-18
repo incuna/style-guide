@@ -1359,38 +1359,36 @@ button {
   font-weight: 300; }
 
 .sg-main-content {
-  padding-top: 40px;
   position: relative; }
 
-.sg-intro {
-  padding-bottom: 40px;
-  border-bottom: 3px solid #d8d8d8; }
+.sg-intro-text {
+  padding: 2.4em 0; }
 
 .sg-main-section-title,
 .sg-section-header,
 .sg-section-sub-title {
-  padding-bottom: 10px; }
+  padding: 1em 0;
+  margin: 0; }
 
 .sg-main-section-title {
-  border-bottom: 3px solid #d8d8d8;
-  margin-top: 20px;
-  margin-bottom: 60px;
-  padding-bottom: 20px;
+  display: block;
+  background: #b2b2b2;
+  color: #fff;
   text-align: center; }
 
 .sg-section-header {
-  border-bottom: 2px solid #d8d8d8; }
+  background: #f2f2f2;
+  color: #999999; }
 
 .sg-section-sub-title {
-  border-bottom: 1px solid #d8d8d8;
-  margin-top: 30px; }
+  padding-bottom: 0.2em;
+  border-bottom: 2px solid #e5e5e5; }
 
 .sg-section {
   margin-bottom: 60px; }
 
 .sg-main-section {
-  padding-bottom: 40px;
-  border-bottom: 3px solid #d8d8d8; }
+  padding-bottom: 40px; }
   .sg-main-section:last-of-type {
     border: 0; }
 
