@@ -9,8 +9,7 @@
         });
 
         $('.js-toggle-header').click(function () {
-            $(this).toggleClass('open');
-            $(this).next('.js-toggle-body').toggleClass('open');
+            $(this).toggleClass('open').next('.js-toggle-body').toggleClass('open');
         });
     });
 
