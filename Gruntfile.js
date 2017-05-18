@@ -8,7 +8,9 @@ module.exports = function (grunt) {
     } else {
         // Use jit-grunt to only load necessary tasks for each invocation of grunt.
         require('jit-grunt')(grunt, {
-            'nunjucks': 'grunt-nunjucks-2-html'
+            'nunjucks': 'grunt-nunjucks-2-html',
+            'json-to-sass': './scripts/json-to-sass.js',
+            'json-to-sass-map': './scripts/json-to-sass-map.js'
         });
     }
 
@@ -79,6 +81,22 @@ module.exports = function (grunt) {
             }
         },
 
+        'json-to-sass': {
+            main: {
+                files: {
+                    './sass/generated/_colors.sass': './json/colors.json'
+                }
+            }
+        },
+
+        'json-to-sass-map': {
+            main: {
+                files: {
+                    './sass/generated/_colors-map.scss': './json/colors.json'
+                }
+            }
+        },
+
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
@@ -102,6 +120,8 @@ module.exports = function (grunt) {
     grunt.registerTask('default', 'dev');
 
     grunt.registerTask('dev', [
+        'json-to-sass',
+        'json-to-sass-map',
         'sass',
         'nunjucks',
         'watch'
