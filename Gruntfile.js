@@ -4,6 +4,10 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var gruntConfig = require('./scripts/grunt-config')(grunt);
+
+    gruntConfig.setGruntConfig();
+
     if (grunt.option('help')) {
         // Load all tasks so they can be viewed in the help: grunt -h or --help.
         require('load-grunt-tasks')(grunt);
@@ -20,7 +24,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: [
-                    '**/*.sass'
+                    '<%= config.paths.sassDir %>/**/*.sass'
                 ],
                 tasks: [
                     'sass'
@@ -28,7 +32,7 @@ module.exports = function (grunt) {
             },
             nunjucks: {
                 files: [
-                    'templates/**/*'
+                    '<%= config.paths.templatesDir %>/**/*.html'
                 ],
                 tasks: [
                     'nunjucks'
@@ -36,16 +40,18 @@ module.exports = function (grunt) {
             },
             json: {
                 files: [
-                    'json/**/*.json'
+                    '<%= config.paths.jsonDir %>/**/*.json'
                 ],
                 tasks: [
                     'json-to-sass',
                     'json-to-sass-map',
+                    'nunjucks',
+                    'sass'
                 ]
             },
             svgstore: {
                 files: [
-                    'icons/**/*.svg'
+                    '<%= config.paths.iconsDir %>/**/*.svg'
                 ],
                 tasks: [
                     'icons',
@@ -62,12 +68,12 @@ module.exports = function (grunt) {
                     require('node-bourbon').includePaths,
                     require('incuna-sass').includePaths,
                     require('incuna-transitions').includePaths,
-                    'sass'
+                    '<%= config.paths.sassDir %>'
                 ]
             },
             dev: {
                 files: {
-                    'styles/style-guide.css': 'sass/style-guide.sass'
+                    '<%= config.paths.cssDir %>/style-guide.css': '<%= config.paths.sassDir %>/style-guide.sass'
                 }
             }
         },
@@ -75,13 +81,13 @@ module.exports = function (grunt) {
         nunjucks: {
             options: {
                 data: {
-                    colors: grunt.file.readJSON(grunt.template.process('json/colors.json')),
-                    icons: grunt.file.readJSON(grunt.template.process('json/icons.json'))
+                    colors: grunt.file.readJSON(grunt.template.process('<%= config.paths.jsonDir %>/colors.json')),
+                    icons: grunt.file.readJSON(grunt.template.process('<%= config.paths.jsonDir %>/icons.json'))
                 }
             },
             dev: {
                 files: {
-                    'style-guide-base.html': 'templates/style-guide-base.html'
+                    'style-guide-base.html': '<%= config.paths.templatesDir %>/style-guide-base.html'
                 }
             }
         },
@@ -89,7 +95,7 @@ module.exports = function (grunt) {
         'json-to-sass': {
             main: {
                 files: {
-                    './sass/generated/_colors.sass': './json/colors.json'
+                    '<%= config.paths.generatedSassDir %>/_colors.sass': '<%= config.paths.jsonDir %>/colors.json'
                 }
             }
         },
@@ -97,7 +103,7 @@ module.exports = function (grunt) {
         'json-to-sass-map': {
             main: {
                 files: {
-                    './sass/generated/_colors-map.scss': './json/colors.json'
+                    '<%= config.paths.generatedSassDir %>/_colors-map.scss': '<%= config.paths.jsonDir %>/colors.json'
                 }
             }
         },
@@ -115,7 +121,7 @@ module.exports = function (grunt) {
                 }
             },
             main: {
-                dest: 'templates/svgstore/svg-defs.svg',
+                dest: '<%= config.paths.templatesDir %>/svgstore/svg-defs.svg',
                 src: ['icons/**/*.svg']
             }
         },
@@ -152,7 +158,7 @@ module.exports = function (grunt) {
             iconFilesObject[icon] = icon;
         });
 
-        grunt.file.write(grunt.template.process('json/icons.json'), JSON.stringify(iconFilesObject));
+        grunt.file.write(grunt.template.process('<%= config.paths.jsonDir %>/icons.json'), JSON.stringify(iconFilesObject));
     });
 
     // - - - T A S K S - - -
