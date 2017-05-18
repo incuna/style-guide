@@ -1085,9 +1085,13 @@ button {
   @media all and (min-width: 1665px) {
     .sg-section-nav {
       width: 220px;
-      top: 25px;
-      right: 25px;
-      left: auto; } }
+      position: absolute;
+      top: 172px;
+      left: auto;
+      right: 25px; }
+      .sg-section-nav.stick-please {
+        position: fixed;
+        top: 25px; } }
 
 .sg-section-nav,
 .sg-section-nav-wrapper,
@@ -1328,7 +1332,6 @@ button {
   .style-guide-page .structure {
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
     padding: 0 15px; }
 
 .sg-header .structure,
