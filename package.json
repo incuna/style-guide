@@ -26,10 +26,11 @@
     "grunt-contrib-jshint": "1.0.0"
   },
   "dependencies": {
+    "grunt-nunjucks-2-html": "3.0.0",
     "grunt-swig-templates": "0.1.4",
-    "node-bourbon": "4.2.3",
     "incuna-sass": "github:incuna/incuna-sass#6.1.0",
-    "incuna-transitions": "github:incuna/incuna-transitions#1.6.0"
+    "incuna-transitions": "github:incuna/incuna-transitions#1.6.0",
+    "node-bourbon": "4.2.3"
   },
   "scripts": {
     "test": "grunt build"
