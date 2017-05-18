@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 module.exports = function (grunt) {
 
     'use strict';
@@ -31,6 +33,23 @@ module.exports = function (grunt) {
                 tasks: [
                     'nunjucks'
                 ]
+            },
+            json: {
+                files: [
+                    'json/**/*.json'
+                ],
+                tasks: [
+                    'json-to-sass',
+                    'json-to-sass-map',
+                ]
+            },
+            icons: {
+                files: [
+                    'icons/*.svg'
+                ],
+                tasks: [
+                    'icons'
+                ]
             }
         },
 
@@ -55,23 +74,8 @@ module.exports = function (grunt) {
         nunjucks: {
             options: {
                 data: {
-                    colors: {
-                        // Just some example colors for show
-                        color1: '#206ba4',
-                        color2: '#bbd9ee',
-                        color3: '#ebf4fa',
-                        color4: '#f8ddb3',
-                        color5: '#e7e4d3',
-                        color6: '#f1efe2',
-                        color7: '#9c9f83',
-                        color8: '#ab7e5b',
-                        color9: '#5b755d'
-                    },
-                    icons: {
-                        alert: 'alert',
-                        flag: 'flag',
-                        blah: 'blah'
-                    }
+                    colors: grunt.file.readJSON(grunt.template.process('json/colors.json')),
+                    icons: grunt.file.readJSON(grunt.template.process('json/icons.json'))
                 }
             },
             dev: {
@@ -97,6 +101,10 @@ module.exports = function (grunt) {
             }
         },
 
+        icons: {
+            all: {}
+        },
+
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
@@ -115,11 +123,28 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.registerMultiTask('icons', function () {
+        var iconsDirContent = fs.readdirSync(grunt.template.process('icons'));
+
+        var svgFilesRegex = /\.svg$/;
+        var iconFiles = iconsDirContent
+            .filter((filename) => svgFilesRegex.test(filename))
+            .map((filename) => filename.replace(svgFilesRegex, ''));
+
+        var iconFilesObject = {};
+
+        iconFiles.forEach((icon) => {
+            iconFilesObject[icon] = icon;
+        });
+
+        grunt.file.write(grunt.template.process('json/icons.json'), JSON.stringify(iconFilesObject));
+    });
     // - - - T A S K S - - -
 
     grunt.registerTask('default', 'dev');
 
     grunt.registerTask('dev', [
+        'icons',
         'json-to-sass',
         'json-to-sass-map',
         'sass',
