@@ -1,6 +1,12 @@
+var fs = require('fs');
+
 module.exports = function (grunt) {
 
     'use strict';
+
+    var gruntConfig = require('./scripts/grunt-config')(grunt);
+
+    gruntConfig.setGruntConfig();
 
     if (grunt.option('help')) {
         // Load all tasks so they can be viewed in the help: grunt -h or --help.
@@ -8,7 +14,9 @@ module.exports = function (grunt) {
     } else {
         // Use jit-grunt to only load necessary tasks for each invocation of grunt.
         require('jit-grunt')(grunt, {
-            'nunjucks': 'grunt-nunjucks-2-html'
+            'nunjucks': 'grunt-nunjucks-2-html',
+            'json-to-sass': './scripts/json-to-sass.js',
+            'json-to-sass-map': './scripts/json-to-sass-map.js'
         });
     }
 
@@ -16,7 +24,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: [
-                    '**/*.sass'
+                    '<%= config.paths.sassDir %>/**/*.sass'
                 ],
                 tasks: [
                     'sass'
@@ -24,10 +32,30 @@ module.exports = function (grunt) {
             },
             nunjucks: {
                 files: [
-                    'templates/**/*'
+                    '<%= config.paths.templatesDir %>/**/*.html'
                 ],
                 tasks: [
                     'nunjucks'
+                ]
+            },
+            json: {
+                files: [
+                    '<%= config.paths.jsonDir %>/**/*.json'
+                ],
+                tasks: [
+                    'json-to-sass',
+                    'json-to-sass-map',
+                    'nunjucks',
+                    'sass'
+                ]
+            },
+            svgstore: {
+                files: [
+                    '<%= config.paths.iconsDir %>/**/*.svg'
+                ],
+                tasks: [
+                    'icons',
+                    'svgstore'
                 ]
             }
         },
@@ -40,12 +68,12 @@ module.exports = function (grunt) {
                     require('node-bourbon').includePaths,
                     require('incuna-sass').includePaths,
                     require('incuna-transitions').includePaths,
-                    'sass'
+                    '<%= config.paths.sassDir %>'
                 ]
             },
             dev: {
                 files: {
-                    'styles/style-guide.css': 'sass/style-guide.sass'
+                    '<%= config.paths.cssDir %>/style-guide.css': '<%= config.paths.sassDir %>/style-guide.sass'
                 }
             }
         },
@@ -53,29 +81,48 @@ module.exports = function (grunt) {
         nunjucks: {
             options: {
                 data: {
-                    colors: {
-                        // Just some example colors for show
-                        color1: '#206ba4',
-                        color2: '#bbd9ee',
-                        color3: '#ebf4fa',
-                        color4: '#f8ddb3',
-                        color5: '#e7e4d3',
-                        color6: '#f1efe2',
-                        color7: '#9c9f83',
-                        color8: '#ab7e5b',
-                        color9: '#5b755d'
-                    },
-                    icons: {
-                        alert: 'alert',
-                        flag: 'flag',
-                        blah: 'blah'
-                    }
+                    colors: grunt.file.readJSON(grunt.template.process('<%= config.paths.jsonDir %>/colors.json')),
+                    icons: grunt.file.readJSON(grunt.template.process('<%= config.paths.jsonDir %>/icons.json'))
                 }
             },
             dev: {
                 files: {
-                    'style-guide-base.html': 'templates/style-guide-base.html'
+                    'style-guide-base.html': '<%= config.paths.templatesDir %>/style-guide-base.html'
                 }
+            }
+        },
+
+        'json-to-sass': {
+            main: {
+                files: {
+                    '<%= config.paths.generatedSassDir %>/_colors.sass': '<%= config.paths.jsonDir %>/colors.json'
+                }
+            }
+        },
+
+        'json-to-sass-map': {
+            main: {
+                files: {
+                    '<%= config.paths.generatedSassDir %>/_colors-map.scss': '<%= config.paths.jsonDir %>/colors.json'
+                }
+            }
+        },
+
+        icons: {
+            all: {}
+        },
+
+        svgstore: {
+            options: {
+                prefix: 'svg-', // This will prefix each ID
+                svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+                    viewBox: '0 0 100 100',
+                    xmlns: 'http://www.w3.org/2000/svg'
+                }
+            },
+            main: {
+                dest: '<%= config.paths.templatesDir %>/svgstore/svg-defs.svg',
+                src: ['icons/**/*.svg']
             }
         },
 
@@ -97,17 +144,38 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.registerMultiTask('icons', function () {
+        var iconsDirContent = fs.readdirSync(grunt.template.process('icons'));
+
+        var svgFilesRegex = /\.svg$/;
+        var iconFiles = iconsDirContent
+            .filter((filename) => svgFilesRegex.test(filename))
+            .map((filename) => filename.replace(svgFilesRegex, ''));
+
+        var iconFilesObject = {};
+
+        iconFiles.forEach((icon) => {
+            iconFilesObject[icon] = icon;
+        });
+
+        grunt.file.write(grunt.template.process('<%= config.paths.jsonDir %>/icons.json'), JSON.stringify(iconFilesObject));
+    });
+
     // - - - T A S K S - - -
 
     grunt.registerTask('default', 'dev');
 
     grunt.registerTask('dev', [
+        'create-colors',
+        'create-icons',
         'sass',
         'nunjucks',
         'watch'
     ]);
 
     grunt.registerTask('build', [
+        'create-colors',
+        'create-icons',
         'nunjucks',
         'sass'
     ]);
@@ -120,5 +188,15 @@ module.exports = function (grunt) {
     grunt.registerTask('test', 'Run the tests.', function (env) {
          'lint'
     });
+
+    grunt.registerTask('create-colors', [
+        'json-to-sass',
+        'json-to-sass-map'
+    ]);
+
+    grunt.registerTask('create-icons', [
+        'icons',
+        'svgstore'
+    ]);
 
 }

@@ -1282,6 +1282,33 @@ button {
 .style-guide-page .grey-11 .color-block {
   background: #191919; }
 
+.color1 .sg-color-block {
+  background: #206ba4; }
+
+.color2 .sg-color-block {
+  background: #bbd9ee; }
+
+.color3 .sg-color-block {
+  background: #ebf4fa; }
+
+.color4 .sg-color-block {
+  background: #f8ddb3; }
+
+.color5 .sg-color-block {
+  background: #e7e4d3; }
+
+.color6 .sg-color-block {
+  background: #f1efe2; }
+
+.color7 .sg-color-block {
+  background: #9c9f83; }
+
+.color8 .sg-color-block {
+  background: #ab7e5b; }
+
+.color9 .sg-color-block {
+  background: #5b755d; }
+
 .style-guide-page .sg-icon-wrapper {
   display: -webkit-box;
   display: -moz-box;
