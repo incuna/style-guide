@@ -24,6 +24,9 @@
         });
 
         $('.js-toggle-header').click(function () {
+            if (!$(this).hasClass('open')) {
+                $('.js-toggle-header, .js-toggle-body').removeClass('open');
+            }
             $(this).toggleClass('open').next('.js-toggle-body').toggleClass('open');
         });
     });
