@@ -28,7 +28,7 @@
     @include justify-content(flex-start)
     @include align-items(flex-start)
     @include flex(1)
-    background: $grey-3
+    background: $grey-light-4
 
 .sg-section-nav-list-wrapper
     @include align-self(stretch)
@@ -39,8 +39,8 @@
 .sg-section-nav-header
     margin: 0
     padding: 0.8em
-    border: 1px solid $grey-3
-    background: $grey-1
+    border: 1px solid $grey-light-4
+    background: $grey-light-6
     text-align: center
     // Hide on small screens
     display: none
@@ -56,14 +56,14 @@
     padding: 1em
         right: 2em
     border:
-        right: 1px solid $grey-4
-        left: 1px solid $grey-4
+        right: 1px solid $grey-light-3
+        left: 1px solid $grey-light-3
     cursor: pointer
     position: relative
 
     @media all and (min-width: #{$section-nav-breakpoint})
         border: 0
-            bottom: 1px solid $grey-4
+            bottom: 1px solid $grey-light-3
 
     &::after
         @include transition(all 0.2s ease-out)
@@ -73,7 +73,7 @@
             origin: center
         font-size: 1em
         line-height: 1
-        color: $grey-5
+        color: $grey-light-2
         position: absolute
         right: 1em
         top: 50%
@@ -82,10 +82,10 @@
 
     #{$hover-states},
     &.open
-        background: $grey-2
+        background: $grey-light-5
 
         &::after
-            color: $grey-4
+            color: $grey-light-3
 
     &.open
         &::after
@@ -112,5 +112,5 @@
     a
         display: block
         padding: 1em
-        border: 1px solid $grey-2
+        border: 1px solid $grey-light-5
         background: $white
