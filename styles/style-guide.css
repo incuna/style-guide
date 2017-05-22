@@ -1366,10 +1366,10 @@ button {
   padding: 60px 15px; }
 
 .sg-header {
-  background: #191919; }
+  background: #333333; }
 
 .sg-footer {
-  background: #191919;
+  background: #333333;
   color: #fff;
   margin-top: 100px; }
   .sg-footer a {
@@ -1412,7 +1412,7 @@ button {
 
 .sg-section-sub-title {
   padding-bottom: 0.2em;
-  border-bottom: 2px solid #e5e5e5; }
+  border-bottom: 2px solid #d8d8d8; }
 
 .sg-section {
   margin-bottom: 60px; }
