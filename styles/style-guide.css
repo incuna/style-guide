@@ -1253,37 +1253,37 @@ button {
   height: 80px;
   border-radius: 100%; }
 
-.style-guide-page .grey-1 .color-block {
+.style-guide-page .grey-light-6 .color-block {
   background: #f2f2f2; }
 
-.style-guide-page .grey-2 .color-block {
+.style-guide-page .grey-light-5 .color-block {
   background: #e5e5e5; }
 
-.style-guide-page .grey-3 .color-block {
+.style-guide-page .grey-light-4 .color-block {
   background: #d8d8d8; }
 
-.style-guide-page .grey-4 .color-block {
+.style-guide-page .grey-light-3 .color-block {
   background: #cccccc; }
 
-.style-guide-page .grey-5 .color-block {
+.style-guide-page .grey-light-2 .color-block {
   background: #b2b2b2; }
 
-.style-guide-page .grey-6 .color-block {
+.style-guide-page .grey-light-1 .color-block {
   background: #999999; }
 
-.style-guide-page .grey-7 .color-block {
+.style-guide-page .grey-base .color-block {
   background: #7f7f7f; }
 
-.style-guide-page .grey-8 .color-block {
+.style-guide-page .grey-dark-1 .color-block {
   background: #666666; }
 
-.style-guide-page .grey-9 .color-block {
+.style-guide-page .grey-dark-2 .color-block {
   background: #4c4c4c; }
 
-.style-guide-page .grey-10 .color-block {
+.style-guide-page .grey-dark-3 .color-block {
   background: #333333; }
 
-.style-guide-page .grey-11 .color-block {
+.style-guide-page .grey-dark-4 .color-block {
   background: #191919; }
 
 .color1 .sg-color-block {
@@ -1366,10 +1366,10 @@ button {
   padding: 60px 15px; }
 
 .sg-header {
-  background: #333333; }
+  background: #191919; }
 
 .sg-footer {
-  background: #333333;
+  background: #191919;
   color: #fff;
   margin-top: 100px; }
   .sg-footer a {
