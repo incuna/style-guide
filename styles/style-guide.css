@@ -1352,41 +1352,43 @@ button {
 .style-guide-page .button {
   margin: 10px; }
 
-.style-guide-page {
-  font-family: 'Lato', sans-serif; }
-  .style-guide-page * {
-    box-sizing: border-box; }
-  .style-guide-page .structure {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px; }
-
-.sg-header .structure,
-.sg-footer .structure {
-  padding: 60px 15px; }
+.style-guide-page .structure {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; }
 
 .sg-header {
-  background: #333333; }
+  font-family: 'Lato', sans-serif;
+  background: #333333;
+  padding-top: 58px; }
+  @media all and (min-width: 1665px) {
+    .sg-header {
+      padding: 0; } }
 
 .sg-footer {
   background: #333333;
   color: #fff;
-  margin-top: 100px; }
+  margin-top: 2em;
+  padding: 1em 0; }
   .sg-footer a {
     color: #fff; }
 
 .sg-title,
 .sg-tagline {
   color: #fff;
-  text-shadow: 0px 0px 10px #191919; }
+  text-shadow: 0px 0px 10px #191919;
+  display: inline-block;
+  vertical-align: baseline; }
 
 .sg-title {
   font-size: 42px;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-right: 1em; }
 
 .sg-tagline {
   font-size: 24px;
-  font-weight: 300; }
+  font-weight: 300;
+  margin-top: 0; }
 
 .sg-main-content {
   position: relative; }
