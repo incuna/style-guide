@@ -87,7 +87,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 files: {
-                    'style-guide-base.html': '<%= config.paths.templatesDir %>/style-guide-base.html'
+                    'index.html': '<%= config.paths.templatesDir %>/style-guide-base.html'
                 }
             }
         },
