@@ -14,6 +14,7 @@ module.exports = function (grunt, commonPath) {
                     cssDir: './styles',
                     generatedSassDir: './sass/generated',
                     templatesDir: './templates',
+                    gruntDir: './grunt',
                     scriptsDir: './scripts'
                 }
             }

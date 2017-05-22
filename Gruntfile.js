@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    var gruntConfig = require('./scripts/grunt-config')(grunt);
+    var gruntConfig = require('./grunt/grunt-config')(grunt);
 
     gruntConfig.setGruntConfig();
 
@@ -15,8 +15,8 @@ module.exports = function (grunt) {
         // Use jit-grunt to only load necessary tasks for each invocation of grunt.
         require('jit-grunt')(grunt, {
             'nunjucks': 'grunt-nunjucks-2-html',
-            'json-to-sass': './scripts/json-to-sass.js',
-            'json-to-sass-map': './scripts/json-to-sass-map.js'
+            'json-to-sass': './grunt/json-to-sass.js',
+            'json-to-sass-map': './grunt/json-to-sass-map.js'
         });
     }
 
@@ -163,9 +163,9 @@ module.exports = function (grunt) {
 
     // - - - T A S K S - - -
 
-    grunt.registerTask('default', 'dev');
+    grunt.registerTask('default', 'style-guide');
 
-    grunt.registerTask('dev', [
+    grunt.registerTask('style-guide', [
         'create-colors',
         'create-icons',
         'sass',
@@ -173,19 +173,19 @@ module.exports = function (grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('build', [
+    grunt.registerTask('style-guide-build', [
         'create-colors',
         'create-icons',
-        'nunjucks',
-        'sass'
+        'sass',
+        'nunjucks'
     ]);
 
-    grunt.registerTask('lint', 'Run the JS linters.', [
+    grunt.registerTask('style-guide-lint', 'Run the JS linters.', [
         'jshint',
         'jscs'
     ]);
 
-    grunt.registerTask('test', 'Run the tests.', function (env) {
+    grunt.registerTask('style-guide-test', 'Run the tests.', function (env) {
          'lint'
     });
 
