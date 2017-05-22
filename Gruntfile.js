@@ -166,20 +166,16 @@ module.exports = function (grunt) {
     grunt.registerTask('default', 'dev');
 
     grunt.registerTask('dev', [
-        'icons',
-        'svgstore',
-        'json-to-sass',
-        'json-to-sass-map',
+        'create-colors',
+        'create-icons',
         'sass',
         'nunjucks',
         'watch'
     ]);
 
     grunt.registerTask('build', [
-        'icons',
-        'svgstore',
-        'json-to-sass',
-        'json-to-sass-map',
+        'create-colors',
+        'create-icons',
         'nunjucks',
         'sass'
     ]);
@@ -192,5 +188,15 @@ module.exports = function (grunt) {
     grunt.registerTask('test', 'Run the tests.', function (env) {
          'lint'
     });
+
+    grunt.registerTask('create-colors', [
+        'json-to-sass',
+        'json-to-sass-map'
+    ]);
+
+    grunt.registerTask('create-icons', [
+        'icons',
+        'svgstore'
+    ]);
 
 }

@@ -6,7 +6,6 @@ module.exports = function (grunt, commonPath) {
 
     var setGruntConfig = function () {
         grunt.config.merge({
-
             config: {
                 paths: {
                     iconsDir: './icons',
@@ -16,7 +15,6 @@ module.exports = function (grunt, commonPath) {
                     generatedSassDir: './sass/generated',
                     templatesDir: './templates',
                     scriptsDir: './scripts'
-
                 }
             }
         });
