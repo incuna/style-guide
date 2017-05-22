@@ -24,13 +24,10 @@
         });
 
         $('.js-toggle-header').click(function () {
-            if ($(this).hasClass('open')) {
-                $(this).removeClass('open').next('.js-toggle-body').removeClass('open');
-            } else {
-                $('.js-toggle-header').removeClass('open');
-                $('.js-toggle-body').removeClass('open');
-                $(this).addClass('open').next('.js-toggle-body').addClass('open');
+            if (!$(this).hasClass('open')) {
+                $('.js-toggle-header, .js-toggle-body').removeClass('open');
             }
+            $(this).toggleClass('open').next('.js-toggle-body').toggleClass('open');
         });
     });
 
