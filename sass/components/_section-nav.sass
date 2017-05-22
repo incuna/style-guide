@@ -7,9 +7,14 @@
 
     @media all and (min-width: #{$section-nav-breakpoint})
         width: $section-nav-width
-        top: $site-padding
-        right: $site-padding
+        position: absolute
+        top: 172px
         left: auto
+        right: $site-padding
+        // Sticky class gets applied with JS at a certain scroll point
+        &.stick-please
+            position: fixed
+            top: $site-padding
 
 .sg-section-nav,
 .sg-section-nav-wrapper,
