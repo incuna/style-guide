@@ -4,9 +4,7 @@
         <h3 class="section-sub-title">Example Form</h3>
 
         <form action="" method="post">
-            <div class="error-block form-error">
-                <p class="error">This is an example form error</p>
-            </div>
+            <p class="error-block form-error">This is an example form error</p>
 
             {% block text_fields %}
                 <fieldset class="text-fieldset">
@@ -20,23 +18,19 @@
                         </div>
                     </div>
 
-                    <div class="control-group email required">
+                    <div class="control-group email required has-error">
                         <label for="field-email" class="control-label">
                             Email input
                             <span class="asterisk">*</span>
                         </label>
                         <div class="controls">
                             <input class="email-input" id="field-email" type="email" name="email" placeholder="Email input" aria-required="true">
-                            <div class="error-block field-error">
-                                <p class="error">This is an example field error</p>
-                            </div>
+                            <p class="error-block field-error">This is an example field error</p>
                         </div>
                     </div>
 
                     <div class="control-group tel">
-                        <label for="field-tel" class="control-label">
-                            Telephone number input
-                        </label>
+                        <label for="field-tel" class="control-label">Telephone number input</label>
                         <div class="controls">
                             <input class="text-input" id="field-tel" type="tel" name="tel" placeholder="Telephone number input" aria-required="false">
                         </div>
@@ -50,14 +44,12 @@
                         <div class="controls">
                             <!-- ideally we would have some nicer more interactive password verficiation stuff here -->
                             <input class="text-input" id="field-password" type="password" name="password" placeholder="Password input" aria-required="true">
-                            <p class="field-help-text">Passwords should be 8 characters or more and contain at least one uppercase letter, one lowercase letter, and one number</p>
+                            <p class="help-text">Passwords should be 8 characters or more and contain at least one uppercase letter, one lowercase letter, and one number</p>
                         </div>
                     </div>
 
                     <div class="control-group number">
-                        <label for="field-number" class="control-label">
-                            Number input
-                        </label>
+                        <label for="field-number" class="control-label">Number input</label>
                         <div class="controls">
                             <input class="text-input" id="field-number" type="number" name="number" placeholder="Number input" aria-required="false">
                         </div>
@@ -76,26 +68,26 @@
 
             {% block radio_fields %}
                 <fieldset class="radio-fieldset">
-                    <div class="control-group radio required">
-                        <label class="control-label">
+                    <fieldset class="control-group radio-group required">
+                        <legend class="field-legend control-label">
                             A question with radio answers
                             <span class="asterisk">*</span>
-                        </label>
+                        </legend>
                         <div class="controls">
-                            <div class="checkable radio">
+                            <div class="radio">
                                 <input class="radio-input" type="radio" name="example" id="radio-example-1">
                                 <label class="radio-label" for="radio-example-1">Panda</label>
                             </div>
-                            <div class="checkable radio">
+                            <div class="radio">
                                 <input class="radio-input" type="radio" name="example" id="radio-example-2">
                                 <label class="radio-label" for="radio-example-2">Platypus</label>
                             </div>
-                            <div class="checkable radio">
+                            <div class="radio">
                                 <input class="radio-input" type="radio" name="example" id="radio-example-3">
                                 <label class="radio-label" for="radio-example-3">Porcupine</label>
                             </div>
                         </div>
-                    </div>
+                    </fieldset>
                 </fieldset>
             {% endblock %}
 
@@ -109,23 +101,23 @@
                             </label>
                         </div>
                     </div>
-                    <div class="control-group checkbox">
-                        <label class="control-label">A group of checkboxes</label>
+                    <fieldset class="control-group checkbox checkbox-group">
+                        <legend class="field-legend control-label">A group of checkboxes</legend>
                         <div class="controls">
-                            <div class="checkable checkbox">
+                            <div class="checkbox">
                                 <input class="checkbox-input" id="group-checkbox-1" name="terms" type="checkbox">
                                 <label class="checkbox-label" for="group-checkbox-1">Panda</label>
                             </div>
-                            <div class="checkable checkbox">
+                            <div class="checkbox">
                                 <input class="checkbox-input" id="group-checkbox-2" name="terms" type="checkbox">
                                 <label class="checkbox-label" for="group-checkbox-2">Platypus</label>
                             </div>
-                            <div class="checkable checkbox">
+                            <div class="checkbox">
                                 <input class="checkbox-input" id="group-checkbox-3" name="terms" type="checkbox">
                                 <label class="checkbox-label" for="group-checkbox-3">Porcupine</label>
                             </div>
                         </div>
-                    </div>
+                    </fieldset>
                 </fieldset>
             {% endblock %}
 
@@ -162,13 +154,6 @@
         </form>
     {% endblock %}
 
-    {% block form_errors %}
-        <h3 class="section-sub-title">Form Errors</h3>
-
-        {% block form_errors_intro %}
-            <p>Form errors are displayed in various ways as demonstrated below</p>
-        {% endblock %}
-
-    {% endblock %}
+    {% block form_errors %}{% endblock %}
 
 {% endblock %}

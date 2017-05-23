@@ -27,7 +27,7 @@
   "dependencies": {
     "grunt-nunjucks-2-html": "3.0.0",
     "grunt-svgstore": "1.0.0",
-    "incuna-sass": "github:incuna/incuna-sass#6.1.0",
+    "incuna-sass": "github:incuna/incuna-sass#7.0.0",
     "incuna-transitions": "github:incuna/incuna-transitions#1.6.0",
     "node-bourbon": "4.2.3"
   },

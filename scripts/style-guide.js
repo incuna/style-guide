@@ -5,7 +5,7 @@
 
         // Sticky navigation
         var distanceY;
-        var stickOn = 431;
+        var stickOn = 260;
         var stickyNav = $('.sticky-nav');
 
         $(window).on('scroll', function () {
