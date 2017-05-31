@@ -412,9 +412,15 @@
 
         <p>This is an example paragraph. Make meme, make cute face spread kitty litter all over house but all of a sudden cat goes crazy scratch leg; meow for can opener to feed me destroy the blinds for russian blue and asdflkjaertvlkjasntvkjn (sits on keyboard). The dog smells bad present belly, scratch hand when stroked sit in box and climb leg stare out the window spread kitty litter all over house. Sleep on keyboard. Poop in litter box, scratch the walls kick up litter soft kitty warm kitty little ball of furr knock dish off table head butt can't eat out of my own dish.</p>
 
-        <p><strong>This is some text in a strong tag</strong> and <b>here is some in a b tag</b></p>
-        <p><em>This is some text in an em tag</em> and <i>here this is an i tag</i></p>
+        <p>This is an example paragraph. Make meme, make cute face spread kitty litter all over house but all of a sudden cat goes crazy scratch leg; meow for can opener to feed me destroy the blinds for russian blue and asdflkjaertvlkjasntvkjn (sits on keyboard).</p>
+
+        <p>This is an example paragraph. The dog smells bad present belly, scratch hand when stroked sit in box and climb leg stare out the window spread kitty litter all over house. Sleep on keyboard. Poop in litter box, scratch the walls kick up litter soft kitty warm kitty little ball of furr knock dish off table head butt can't eat out of my own dish.</p>
+
+        <p><strong>This is some text in a strong tag</strong> and <b>This is some text in a b tag</b></p>
+        <p><em>This is some text in an em tag</em> and <i>This is some text in an i tag</i></p>
         <p><em><strong>This text is both bold and italic</strong></em></p>
+
+        <code>This is some text inside a code element</code>
 
         
 
@@ -623,9 +629,7 @@
         <h3 class="section-sub-title">Example Form</h3>
 
         <form action="" method="post">
-            <div class="error-block form-error">
-                <p class="error">This is an example form error</p>
-            </div>
+            <p class="error-block form-error">This is an example form error</p>
 
             
                 <fieldset class="text-fieldset">
@@ -639,23 +643,19 @@
                         </div>
                     </div>
 
-                    <div class="control-group email required">
+                    <div class="control-group email required has-error">
                         <label for="field-email" class="control-label">
                             Email input
                             <span class="asterisk">*</span>
                         </label>
                         <div class="controls">
                             <input class="email-input" id="field-email" type="email" name="email" placeholder="Email input" aria-required="true">
-                            <div class="error-block field-error">
-                                <p class="error">This is an example field error</p>
-                            </div>
+                            <p class="error-block field-error">This is an example field error</p>
                         </div>
                     </div>
 
                     <div class="control-group tel">
-                        <label for="field-tel" class="control-label">
-                            Telephone number input
-                        </label>
+                        <label for="field-tel" class="control-label">Telephone number input</label>
                         <div class="controls">
                             <input class="text-input" id="field-tel" type="tel" name="tel" placeholder="Telephone number input" aria-required="false">
                         </div>
@@ -669,14 +669,12 @@
                         <div class="controls">
                             <!-- ideally we would have some nicer more interactive password verficiation stuff here -->
                             <input class="text-input" id="field-password" type="password" name="password" placeholder="Password input" aria-required="true">
-                            <p class="field-help-text">Passwords should be 8 characters or more and contain at least one uppercase letter, one lowercase letter, and one number</p>
+                            <p class="help-text">Passwords should be 8 characters or more and contain at least one uppercase letter, one lowercase letter, and one number</p>
                         </div>
                     </div>
 
                     <div class="control-group number">
-                        <label for="field-number" class="control-label">
-                            Number input
-                        </label>
+                        <label for="field-number" class="control-label">Number input</label>
                         <div class="controls">
                             <input class="text-input" id="field-number" type="number" name="number" placeholder="Number input" aria-required="false">
                         </div>
@@ -695,26 +693,26 @@
 
             
                 <fieldset class="radio-fieldset">
-                    <div class="control-group radio required">
-                        <label class="control-label">
+                    <fieldset class="control-group radio-group required">
+                        <legend class="field-legend control-label">
                             A question with radio answers
                             <span class="asterisk">*</span>
-                        </label>
+                        </legend>
                         <div class="controls">
-                            <div class="checkable radio">
+                            <div class="radio">
                                 <input class="radio-input" type="radio" name="example" id="radio-example-1">
                                 <label class="radio-label" for="radio-example-1">Panda</label>
                             </div>
-                            <div class="checkable radio">
+                            <div class="radio">
                                 <input class="radio-input" type="radio" name="example" id="radio-example-2">
                                 <label class="radio-label" for="radio-example-2">Platypus</label>
                             </div>
-                            <div class="checkable radio">
+                            <div class="radio">
                                 <input class="radio-input" type="radio" name="example" id="radio-example-3">
                                 <label class="radio-label" for="radio-example-3">Porcupine</label>
                             </div>
                         </div>
-                    </div>
+                    </fieldset>
                 </fieldset>
             
 
@@ -728,23 +726,23 @@
                             </label>
                         </div>
                     </div>
-                    <div class="control-group checkbox">
-                        <label class="control-label">A group of checkboxes</label>
+                    <fieldset class="control-group checkbox checkbox-group">
+                        <legend class="field-legend control-label">A group of checkboxes</legend>
                         <div class="controls">
-                            <div class="checkable checkbox">
+                            <div class="checkbox">
                                 <input class="checkbox-input" id="group-checkbox-1" name="terms" type="checkbox">
                                 <label class="checkbox-label" for="group-checkbox-1">Panda</label>
                             </div>
-                            <div class="checkable checkbox">
+                            <div class="checkbox">
                                 <input class="checkbox-input" id="group-checkbox-2" name="terms" type="checkbox">
                                 <label class="checkbox-label" for="group-checkbox-2">Platypus</label>
                             </div>
-                            <div class="checkable checkbox">
+                            <div class="checkbox">
                                 <input class="checkbox-input" id="group-checkbox-3" name="terms" type="checkbox">
                                 <label class="checkbox-label" for="group-checkbox-3">Porcupine</label>
                             </div>
                         </div>
-                    </div>
+                    </fieldset>
                 </fieldset>
             
 
@@ -780,13 +778,6 @@
             
         </form>
     
-
-    
-        <h3 class="section-sub-title">Form Errors</h3>
-
-        
-            <p>Form errors are displayed in various ways as demonstrated below</p>
-        
 
     
 
